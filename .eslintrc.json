@@ -1,0 +1,8 @@
+{
+  "root": true,
+  "extends": "next",
+  "rules": {
+    "@next/next/no-document-import-in-page":"off",
+    "react/display-name": 0
+  }
+}
