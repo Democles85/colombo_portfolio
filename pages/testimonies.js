@@ -24,9 +24,9 @@ const Testimonies = () => {
         columns={1}
         spacing={10}
         mb={10}
-        // display="flex"
-        // flexDirection="column"
-        // alignItems="center"
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
       >
         {data.testimonies.map(testimonies => (
           <Grid
@@ -36,7 +36,7 @@ const Testimonies = () => {
             borderRadius="10px"
             border="1px solid rgba(255,255,255, 0.18)"
             py={5}
-            // maxWidth="560px"
+            maxWidth="560px"
           >
             {/* Card Header */}
             <WrapItem display="inline-block" textAlign="center">
@@ -61,8 +61,14 @@ const Testimonies = () => {
               </GridItem>
             </WrapItem>
             {/* Content */}
-            <GridItem key={testimonies.content} w="100%" md={4} h="100%" px={5}>
-              <Text textAlign="justify" fontSize={[16, null, 18]}>
+            <GridItem
+              key={testimonies.content}
+              w="100%"
+              md={4}
+              h="100%"
+              px={[5, 15, 50]}
+            >
+              <Text textAlign="center" fontSize={[16, null, 18]} noOfLines="20">
                 {testimonies.content}
               </Text>
             </GridItem>

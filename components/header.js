@@ -8,15 +8,32 @@ const HeaderBox = styled.span`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 300px;
+  height: 100%;
   width: 100%;
   line-height: 35px;
   padding: 10px;
+  padding-bottom: 30px;
 `
 
 const Header = () => {
   return (
     <HeaderBox>
+      <Box
+        display="inherit"
+        flexDirection="inherit"
+        alignItems="inherit"
+        justifyContent="inherit"
+        pb={10}
+      >
+        <Image src="/images/logo.png" alt="logo" />
+        <Text
+          fontSize={[36, 40, 46]}
+          fontFamily="Beau Rivage, cursive"
+          color={useColorModeValue('#202020', '#fbb03b')}
+        >
+          Resonate With Yourself
+        </Text>
+      </Box>
       <Box
         textStyle="h1"
         borderRadius="lg"

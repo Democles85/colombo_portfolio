@@ -40,7 +40,7 @@ const Home = () => (
         Hello, I&apos;m...
       </Box> */}
 
-      <Box display={{ md: 'flex' }}>
+      {/* <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
             Name Surname
@@ -64,9 +64,9 @@ const Home = () => (
             alt="Profile Image"
           />
         </Box>
-      </Box>
+      </Box> */}
 
-      <Section delay={0.1}>
+      {/* <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
           Resume
         </Heading>
@@ -78,9 +78,9 @@ const Home = () => (
             </Button>
           </NextLink>
         </Box>
-      </Section>
+      </Section> */}
 
-      <Section delay={0.2}>
+      {/* <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
           Bio
         </Heading>
@@ -96,21 +96,21 @@ const Home = () => (
           <BioYear>Year 3</BioYear>
           Filler Content
         </BioSection>
-      </Section>
+      </Section> */}
 
-      <Section delay={0.3}>
+      {/* <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
           I ♥
         </Heading>
         <Paragraph>What you love doing?</Paragraph>
-      </Section>
+      </Section> */}
 
       <Section delay={0.3}>
-        <Heading as="h3" variant="section-title">
+        {/* <Heading as="h3" variant="section-title">
           Where to find me
-        </Heading>
-        <List>
-          {/* <ListItem>
+        </Heading>  */}
+        {/* <List> */}
+        {/* <ListItem>
             <Link href="https://github.com/Democles85" target="_blank">
               <Button
                 variant="ghost"
@@ -121,7 +121,7 @@ const Home = () => (
               </Button>
             </Link>
           </ListItem> */}
-          <ListItem>
+        {/* <ListItem>
             <Link href="https://twitter.com/LeJhin1" target="_blank">
               <Button
                 variant="ghost"
@@ -157,9 +157,9 @@ const Home = () => (
               </Button>
             </Link>
           </ListItem>
-        </List>
+        </List> */}
 
-        <SimpleGrid columns={[1, 2, 2]} gap={6}>
+        {/* <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
             href="https://www.youtube.com/watch?v=O0RKS9592-s"
             title="Fav Song of the Month"
@@ -174,12 +174,12 @@ const Home = () => (
           >
             An E-Commerce website for buying different products
           </GridItem>
-        </SimpleGrid>
+        </SimpleGrid> */}
 
         <Box align="center" my={4}>
-          <NextLink href="/posts">
+          <NextLink href="/testimonies">
             <Button rightIcon={<ChevronRightIcon />} colorScheme="orange">
-              Testimonies
+              About Me
             </Button>
           </NextLink>
         </Box>

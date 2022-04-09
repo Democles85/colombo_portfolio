@@ -21,11 +21,20 @@ const data = {
     {
       id: '3',
       title: 'I really thank you!',
-      author: 'Alba L.',
+      author: 'Lisa C.',
       content:
-        'I would say it was a unique and unexpected experience. You managed to give me confidence and peace of mind. That was important because it allowed me to experience it deeply. The atmosphere created, was attractive containing: Music, Tibetan Bells, Soft Lights, Incense and above all the use of musical instruments. In terms of bodywork seemed to me sensitive and at the same time very energetic and deep. It was beautiful how the energy became more intense based on how my body felt. At one point I was completely relaxed and at ease, so much that it felt like I was in ecstasy. I was feeling Psychedelic hallucinations. If there was another meeting in the future, I would like to know more.',
-      image: '/images/testimonials/alba_l.jpeg',
+        'I would like to write about my experience... I have never done any kind of bodywork, so it was the first time for me... I even find it difficult to describe it in words, because it was all in the realm of emotions. I completely left myself to be led by Colombo, and very quickly it made me feel the energy I had in my body, a deep sensation that I had never felt before. To feel all of this, the explanation and trust he gave me before the session, helped me a lot. In conclusion, Colombo was very professional and deep in what he did. If you want to rediscover your energy and body, trust him! I walked away thinking what did he do?!',
+      image: '/images/testimonials/lisa_c.jpeg',
       country: 'Italy'
+    },
+    {
+      id: '4',
+      title: 'Forever printing in my soul.',
+      author: 'Marjana K.',
+      content:
+        "Sometimes you feel the pain, know the trauma, know your immense potential, but just don't know how to deal with it and that's because of energy blockages. My soul was howling continuously. My being, itself, was looking for help, but my mind kept distracting. After all, universe itself knew who to send on my way, and Colombo crossed my path. I've heard of tantric healing & finally I got to try it at the perfect timing of universe. At first, Colombo and I talked about energy, chakra's and our emotional body. He took enough time to explain and connect spiritually  with me, so I could feel comfortable and at peace. Everything was so clean and prepared to detail. Very gently, Colombo instructed me how to use my energy and to allow it to flow through my body, feeling the Divine. All was very well organized and the aromatherapy he used, made this treatment even more relaxing and flawless. Slowly, I could hear, touch & see every corner of myself, my soul & my body. The manipulation of energy was immense. It was an endless energetic journey, where I met all my cells and gave gratitude to them. I felt within every piece of my body, the pure flow of this endless energy. I was feeling so pure. I came back as flower on it's peaking blossom & I felt my inner child the happiest she has ever been. It was a cosmic orgasm for the soul. That's pure love Colombo gave me, unconditionally without measuring.",
+      image: '/images/testimonials/marjana_k.jpeg',
+      country: 'Albania'
     }
   ]
 }

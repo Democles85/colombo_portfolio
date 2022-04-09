@@ -73,20 +73,26 @@ const Navbar = props => {
           mt={{ base: 4, md: 0 }}
         >
           <LinkItem href="/works" path={path}>
-            My Packages
+            About Me
           </LinkItem>
-          <LinkItem href="/testimonies" path={path}>
-            Testimonies
+          <LinkItem href="/services" path={path}>
+            Services
           </LinkItem>
           <LinkItem
-            _target="_blank"
-            href=""
+            // _target="_blank"
+            href="/testimonies"
             path={path}
-            display="inline-flex"
-            alignItems="center"
-            style={{ gap: 4 }}
-            pl={2}
+            //   display="inline-flex"
+            //   alignItems="center"
+            //   style={{ gap: 4 }}
+            //   pl={2}
           >
+            Testimonies
+          </LinkItem>
+          <LinkItem href="/products" path={path}>
+            Products
+          </LinkItem>
+          <LinkItem href="/contact" path={path}>
             Contact
           </LinkItem>
         </Stack>
@@ -102,19 +108,29 @@ const Navbar = props => {
                 variant="outline"
                 aria-label="Options"
               />
+              {/* The dropdown menu */}
               <MenuList>
                 <NextLink href="/" passHref>
-                  <MenuItem as={Link}>My Packages</MenuItem>
+                  <MenuItem as={Link}>Home</MenuItem>
+                </NextLink>
+                <NextLink href="/works" passHref>
+                  <MenuItem as={Link}>About Me</MenuItem>
+                </NextLink>
+                <NextLink href="/services" passHref>
+                  <MenuItem as={Link}>Services</MenuItem>
                 </NextLink>
                 <NextLink href="/testimonies" passHref>
                   <MenuItem as={Link}>Testimonies</MenuItem>
                 </NextLink>
-                <NextLink href="/posts" passHref>
+                <NextLink href="/products" passHref>
+                  <MenuItem as={Link}>Products</MenuItem>
+                </NextLink>
+                <NextLink href="/contact" passHref>
                   <MenuItem as={Link}>Contact</MenuItem>
                 </NextLink>
-                <MenuItem as={Link} href="#">
+                {/* <MenuItem as={Link} href="#">
                   View Source
-                </MenuItem>
+                </MenuItem> */}
               </MenuList>
             </Menu>
           </Box>
