@@ -60,7 +60,7 @@ const Home = () => (
             maxWidth="100px"
             display="inline-block"
             borderRadius="full"
-            src="/images/floppa.jpg"
+            src="/images/icon.png"
             alt="Profile Image"
           />
         </Box>
