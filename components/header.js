@@ -25,11 +25,11 @@ const Header = () => {
         justifyContent="inherit"
         pb={10}
       >
-        <Image src="/images/logo.png" alt="logo" />
+        <Image src="/images/logo.png" alt="logo" width={['40%', '40%']} />
         <Text
-          fontSize={[36, 40, 46]}
-          fontFamily="Beau Rivage, cursive"
-          color={useColorModeValue('#202020', '#fbb03b')}
+          textAlign="center"
+          fontSize={[28, null, 36]}
+          color={useColorModeValue('#202020', '#FF8000')}
         >
           Resonate With Yourself
         </Text>
@@ -37,11 +37,16 @@ const Header = () => {
       <Box
         textStyle="h1"
         borderRadius="lg"
-        p={3}
+        p={5}
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
       >
-        <Text color={useColorModeValue('#202020', '#eeeeee')} fontWeight="bold">
-          “The greatest healing therapy is friendship and love.”{' '}
+        <Text
+          color={useColorModeValue('#202020', '#eeeeee')}
+          fontWeight={['medium', null, 'bold']}
+          fontSize={[18, null, 24]}
+        >
+          “The human body is like a book, every step we have taken, every
+          emotion we have felt is written on it.”{' '}
           <Text
             color={useColorModeValue('#FF8000', '#FF8000')}
             fontSize="lg"
@@ -49,7 +54,7 @@ const Header = () => {
             fontWeight="light"
             textAlign="right"
           >
-            – Hubert Humphrey
+            – Colombo
           </Text>
         </Text>
       </Box>

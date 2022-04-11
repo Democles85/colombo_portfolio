@@ -13,11 +13,23 @@ import {
   MenuButton,
   IconButton,
   useColorModeValue,
-  color
+  color,
+  useDisclosure,
+  Button,
+  Drawer,
+  DrawerHeader,
+  DrawerContent,
+  DrawerBody,
+  DrawerCloseButton,
+  Text,
+  DrawerOverlay,
+  VStack,
+  StackDivider
 } from '@chakra-ui/react'
-import { HamburgerIcon } from '@chakra-ui/icons'
+import { ChevronDownIcon, HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
 import { IoLogoGithub } from 'react-icons/io5'
+import React from 'react'
 
 const LinkItem = ({ href, path, _target, children, ...props }) => {
   const active = path === href
@@ -39,6 +51,8 @@ const LinkItem = ({ href, path, _target, children, ...props }) => {
 
 const Navbar = props => {
   const { path } = props
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const firstField = React.useRef()
 
   return (
     <Box
@@ -60,7 +74,7 @@ const Navbar = props => {
       >
         <Flex align="center" mr={5}>
           <Heading as="h1" size="lg" letterSpacing={'tighter'}>
-            <Logo />
+            {/* <Logo /> */}
           </Heading>
         </Flex>
 
@@ -69,6 +83,7 @@ const Navbar = props => {
           display={{ base: 'none', md: 'flex' }}
           width={{ base: 'full', md: 'auto' }}
           alignItems="center"
+          justifyContent="flex-start"
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
@@ -80,14 +95,14 @@ const Navbar = props => {
           </LinkItem>
           <LinkItem
             // _target="_blank"
-            href="/testimonies"
+            href="/testimonials"
             path={path}
             //   display="inline-flex"
             //   alignItems="center"
             //   style={{ gap: 4 }}
             //   pl={2}
           >
-            Testimonies
+            Testimonials
           </LinkItem>
           <LinkItem href="/products" path={path}>
             Products
@@ -101,14 +116,14 @@ const Navbar = props => {
           <ThemeToggleButton />
 
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
-            <Menu>
+            {/* Dropdown Menu */}
+            {/* <Menu>
               <MenuButton
                 as={IconButton}
                 icon={<HamburgerIcon />}
                 variant="outline"
                 aria-label="Options"
               />
-              {/* The dropdown menu */}
               <MenuList>
                 <NextLink href="/" passHref>
                   <MenuItem as={Link}>Home</MenuItem>
@@ -128,11 +143,84 @@ const Navbar = props => {
                 <NextLink href="/contact" passHref>
                   <MenuItem as={Link}>Contact</MenuItem>
                 </NextLink>
-                {/* <MenuItem as={Link} href="#">
+                <MenuItem as={Link} href="#">
                   View Source
-                </MenuItem> */}
+                </MenuItem>
               </MenuList>
-            </Menu>
+            </Menu> */}
+
+            <Button rightIcon={<HamburgerIcon />} onClick={onOpen}>
+              Menu
+            </Button>
+            <Drawer
+              isOpen={isOpen}
+              size="full"
+              onClose={onClose}
+              initialFocusRef={firstField}
+            >
+              <DrawerOverlay />
+              <DrawerContent bg={useColorModeValue('#f0e7db', '#202023')}>
+                <DrawerHeader>
+                  <Text textAlign="center" color="#ff8000">
+                    Resonate With Yourself
+                  </Text>
+                  <DrawerCloseButton />
+                </DrawerHeader>
+                {/* Drawer Body */}
+                <DrawerBody>
+                  <VStack
+                    divider={
+                      <StackDivider
+                        borderColor={useColorModeValue('#202023', '#ff8000')}
+                      />
+                    }
+                    spacing={5}
+                    align="center"
+                    fontSize="lg"
+                    alignItems="center"
+                    justifyContent="center"
+                    height="100%"
+                  >
+                    <NextLink href="/" passHref>
+                      <Button onClick={onClose} variant="link">
+                        Home
+                      </Button>
+                    </NextLink>
+                    <NextLink href="/" passHref>
+                      <Button onClick={onClose} variant="link">
+                        About Me
+                      </Button>
+                    </NextLink>
+                    <Menu isLazy placement="bottom" colorScheme={'orange'}>
+                      <MenuButton as={Button} variant="link">
+                        Services <ChevronDownIcon />
+                      </MenuButton>
+                      <MenuList>
+                        <NextLink href="/dearmoring" passHref>
+                          <MenuItem onClick={onClose}>De-Armoring</MenuItem>
+                        </NextLink>
+                        <NextLink href="/dearmoring" passHref>
+                          <MenuItem onClick={onClose}>De-Armoring</MenuItem>
+                        </NextLink>
+                        <NextLink href="/dearmoring" passHref>
+                          <MenuItem onClick={onClose}>De-Armoring</MenuItem>
+                        </NextLink>
+                      </MenuList>
+                    </Menu>
+                    <NextLink href="/testimonials" passHref>
+                      <Button onClick={onClose} variant="link">
+                        Testimonials
+                      </Button>
+                    </NextLink>
+                    <NextLink href="/contact" passHref>
+                      <Button onClick={onClose} variant="link">
+                        Contact
+                      </Button>
+                    </NextLink>
+                  </VStack>
+                </DrawerBody>
+              </DrawerContent>
+            </Drawer>
           </Box>
         </Box>
       </Container>

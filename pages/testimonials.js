@@ -12,7 +12,7 @@ import React from 'react'
 import Layout from '../components/layouts/article'
 import data from '../utils/data'
 
-const Testimonies = () => {
+const Testimonials = () => {
   const colorValue = useColorModeValue(
     'rgba(255,255,255, 0.8)',
     'rgba(255,255,255, 0.18)'
@@ -68,7 +68,7 @@ const Testimonies = () => {
               h="100%"
               px={[5, 15, 50]}
             >
-              <Text textAlign="center" fontSize={[16, null, 18]} noOfLines="20">
+              <Text textAlign="center" fontSize={[16, null, 18]}>
                 {testimonies.content}
               </Text>
             </GridItem>
@@ -79,4 +79,4 @@ const Testimonies = () => {
   )
 }
 
-export default Testimonies
+export default Testimonials
