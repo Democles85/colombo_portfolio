@@ -204,7 +204,7 @@ const Navbar = props => {
                           justifyContent="center"
                           textAlign="center"
                         >
-                          <NextLink passHref href="/dearmoring">
+                          <NextLink passHref href="/bodywork">
                             <Button
                               variant="link"
                               onClick={onClose}
@@ -213,10 +213,10 @@ const Navbar = props => {
                               fontWeight="light"
                               fontSize="18px"
                             >
-                              De-Armoring
+                              Bodywork
                             </Button>
                           </NextLink>
-                          <NextLink passHref href="/test">
+                          <NextLink passHref href="/de-armouring">
                             <Button
                               variant="link"
                               onClick={onClose}
@@ -225,10 +225,10 @@ const Navbar = props => {
                               fontWeight="light"
                               fontSize="18px"
                             >
-                              Test
+                              De-armouring
                             </Button>
                           </NextLink>
-                          <NextLink passHref href="/test">
+                          <NextLink passHref href="/tantric-de-armouring">
                             <Button
                               variant="link"
                               onClick={onClose}
@@ -237,7 +237,7 @@ const Navbar = props => {
                               fontWeight="light"
                               fontSize="18px"
                             >
-                              Test
+                              Tantric De-armouring
                             </Button>
                           </NextLink>
                         </AccordionPanel>
