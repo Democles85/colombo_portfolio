@@ -208,9 +208,10 @@ const Navbar = props => {
                             <Button
                               variant="link"
                               onClick={onClose}
-                              fontSize={fontSize}
                               width="100%"
                               py="2"
+                              fontWeight="light"
+                              fontSize="18px"
                             >
                               De-Armoring
                             </Button>
@@ -219,9 +220,10 @@ const Navbar = props => {
                             <Button
                               variant="link"
                               onClick={onClose}
-                              fontSize={fontSize}
                               width="100%"
                               py="2"
+                              fontWeight="light"
+                              fontSize="18px"
                             >
                               Test
                             </Button>
@@ -230,9 +232,10 @@ const Navbar = props => {
                             <Button
                               variant="link"
                               onClick={onClose}
-                              fontSize={fontSize}
                               width="100%"
                               py="2"
+                              fontWeight="light"
+                              fontSize="18px"
                             >
                               Test
                             </Button>

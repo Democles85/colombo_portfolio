@@ -44,9 +44,10 @@ const Header = () => {
           color={useColorModeValue('#202020', '#eeeeee')}
           fontWeight={['medium', null, 'bold']}
           fontSize={[18, null, 24]}
+          letterSpacing="tight"
         >
-          “The human body is like a book, every step we have taken, every
-          emotion we have felt is written on it.”{' '}
+          “Do not try to find your home by seeking light, all darkness inside
+          and outside the Universe is part of our home.”{' '}
           <Text
             color={useColorModeValue('#FF8000', '#FF8000')}
             fontSize="lg"
