@@ -24,7 +24,8 @@ import {
   Text,
   DrawerOverlay,
   VStack,
-  StackDivider
+  StackDivider,
+  DrawerFooter
 } from '@chakra-ui/react'
 import { ChevronDownIcon, HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
@@ -219,6 +220,14 @@ const Navbar = props => {
                     </NextLink>
                   </VStack>
                 </DrawerBody>
+                <DrawerFooter
+                  width="100%"
+                  textAlign="center"
+                  alignItems="center"
+                  justifyContent="center"
+                >
+                  <Button onClick={onClose}>Close</Button>
+                </DrawerFooter>
               </DrawerContent>
             </Drawer>
           </Box>
