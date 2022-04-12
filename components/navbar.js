@@ -159,8 +159,11 @@ const Navbar = props => {
               onClose={onClose}
               initialFocusRef={firstField}
             >
-              {/* <DrawerOverlay /> */}
-              <DrawerContent bg={useColorModeValue('#f0e7db', '#202023')}>
+              <DrawerOverlay height="100% !important" />
+              <DrawerContent
+                bg={useColorModeValue('#f0e7db', '#202023')}
+                height="100% !important"
+              >
                 <DrawerHeader>
                   <Text textAlign="center" color="#ff8000">
                     Resonate With Yourself
