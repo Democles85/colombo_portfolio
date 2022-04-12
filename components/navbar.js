@@ -25,7 +25,12 @@ import {
   DrawerOverlay,
   VStack,
   StackDivider,
-  DrawerFooter
+  DrawerFooter,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionIcon,
+  AccordionPanel
 } from '@chakra-ui/react'
 import { ChevronDownIcon, HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
@@ -54,6 +59,7 @@ const Navbar = props => {
   const { path } = props
   const { isOpen, onOpen, onClose } = useDisclosure()
   const firstField = React.useRef()
+  const fontSize = '20px'
 
   return (
     <Box
@@ -117,39 +123,6 @@ const Navbar = props => {
           <ThemeToggleButton />
 
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
-            {/* Dropdown Menu */}
-            {/* <Menu>
-              <MenuButton
-                as={IconButton}
-                icon={<HamburgerIcon />}
-                variant="outline"
-                aria-label="Options"
-              />
-              <MenuList>
-                <NextLink href="/" passHref>
-                  <MenuItem as={Link}>Home</MenuItem>
-                </NextLink>
-                <NextLink href="/about" passHref>
-                  <MenuItem as={Link}>About Me</MenuItem>
-                </NextLink>
-                <NextLink href="/services" passHref>
-                  <MenuItem as={Link}>Services</MenuItem>
-                </NextLink>
-                <NextLink href="/testimonies" passHref>
-                  <MenuItem as={Link}>Testimonies</MenuItem>
-                </NextLink>
-                <NextLink href="/products" passHref>
-                  <MenuItem as={Link}>Products</MenuItem>
-                </NextLink>
-                <NextLink href="/contact" passHref>
-                  <MenuItem as={Link}>Contact</MenuItem>
-                </NextLink>
-                <MenuItem as={Link} href="#">
-                  View Source
-                </MenuItem>
-              </MenuList>
-            </Menu> */}
-
             <Button rightIcon={<HamburgerIcon />} onClick={onOpen}>
               Menu
             </Button>
@@ -161,7 +134,10 @@ const Navbar = props => {
             >
               <DrawerOverlay height="100% !important" />
               <DrawerContent
-                bg={useColorModeValue('#f0e7db', '#202023')}
+                bg={useColorModeValue(
+                  'rgb(240, 231, 219, 0.95)',
+                  'rgb(32, 32, 35, 0.95)'
+                )}
                 height="100% !important"
               >
                 <DrawerHeader>
@@ -186,38 +162,101 @@ const Navbar = props => {
                     height="100%"
                   >
                     <NextLink href="/" passHref>
-                      <Button onClick={onClose} variant="link">
+                      <Button
+                        onClick={onClose}
+                        variant="link"
+                        width="100%"
+                        fontSize={fontSize}
+                      >
                         Home
                       </Button>
                     </NextLink>
                     <NextLink href="/" passHref>
-                      <Button onClick={onClose} variant="link">
+                      <Button
+                        onClick={onClose}
+                        variant="link"
+                        width="100%"
+                        fontSize={fontSize}
+                      >
                         About Me
                       </Button>
                     </NextLink>
-                    <Menu isLazy placement="bottom" colorScheme={'orange'}>
-                      <MenuButton as={Button} variant="link">
-                        Services <ChevronDownIcon />
-                      </MenuButton>
-                      <MenuList>
-                        <NextLink href="/dearmoring" passHref>
-                          <MenuItem onClick={onClose}>De-Armoring</MenuItem>
-                        </NextLink>
-                        <NextLink href="/dearmoring" passHref>
-                          <MenuItem onClick={onClose}>De-Armoring</MenuItem>
-                        </NextLink>
-                        <NextLink href="/dearmoring" passHref>
-                          <MenuItem onClick={onClose}>De-Armoring</MenuItem>
-                        </NextLink>
-                      </MenuList>
-                    </Menu>
+                    <Accordion allowToggle border="transparent" width="100%">
+                      <AccordionItem>
+                        <h2>
+                          <AccordionButton
+                            padding="0"
+                            fontWeight="500"
+                            display="flex"
+                            justifyContent="center"
+                            alignItems="center"
+                          >
+                            <Box textAlign="center" fontSize={fontSize}>
+                              Services
+                            </Box>
+                            <AccordionIcon />
+                          </AccordionButton>
+                        </h2>
+                        <AccordionPanel
+                          display="flex"
+                          flexDir="column"
+                          alignItems="center"
+                          justifyContent="center"
+                          textAlign="center"
+                        >
+                          <NextLink passHref href="/dearmoring">
+                            <Button
+                              variant="link"
+                              onClick={onClose}
+                              fontSize={fontSize}
+                              width="100%"
+                              py="2"
+                            >
+                              De-Armoring
+                            </Button>
+                          </NextLink>
+                          <NextLink passHref href="/test">
+                            <Button
+                              variant="link"
+                              onClick={onClose}
+                              fontSize={fontSize}
+                              width="100%"
+                              py="2"
+                            >
+                              Test
+                            </Button>
+                          </NextLink>
+                          <NextLink passHref href="/test">
+                            <Button
+                              variant="link"
+                              onClick={onClose}
+                              fontSize={fontSize}
+                              width="100%"
+                              py="2"
+                            >
+                              Test
+                            </Button>
+                          </NextLink>
+                        </AccordionPanel>
+                      </AccordionItem>
+                    </Accordion>
                     <NextLink href="/testimonials" passHref>
-                      <Button onClick={onClose} variant="link">
+                      <Button
+                        onClick={onClose}
+                        variant="link"
+                        width="100%"
+                        fontSize={fontSize}
+                      >
                         Testimonials
                       </Button>
                     </NextLink>
                     <NextLink href="/contact" passHref>
-                      <Button onClick={onClose} variant="link">
+                      <Button
+                        onClick={onClose}
+                        variant="link"
+                        width="100%"
+                        fontSize={fontSize}
+                      >
                         Contact
                       </Button>
                     </NextLink>
