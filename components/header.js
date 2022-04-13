@@ -27,10 +27,10 @@ const Header = () => {
       >
         <Image src="/images/logo.png" alt="logo" width={['90%', '70%']} />
         <Text
-          fontFamily="'Beau Rivage', cursive"
+          // fontFamily="'Beau Rivage', cursive"
           textAlign="center"
-          fontSize={[38, null, 46]}
-          color={useColorModeValue('#202020', '#FF8000')}
+          fontSize={[28, null, 36]}
+          color={useColorModeValue('#202020', '#fcb03b')}
         >
           Resonate With Yourself
         </Text>

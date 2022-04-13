@@ -15,16 +15,11 @@ const Contact = () => {
   const formBoxPaddingY = 2.5
   const formBoxPaddingX = 25
   const formBoxWidth = '100%'
-  async function handleOnSubmit(e) {
-    e.preventDefault()
-    const formData = {}
-    Array.from(e.currentTarget.elements)
-  }
   return (
     <Layout title="Contact">
       <Section delay={0.2}>
         <Box>
-          <FormControl onSubmit={handleOnSubmit}>
+          <FormControl>
             <Box display="flex" flexDir={['column', null, 'row']}>
               <Box
                 width={formBoxWidth}
