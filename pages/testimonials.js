@@ -18,7 +18,7 @@ const Testimonials = () => {
     'rgba(255,255,255, 0.18)'
   )
   return (
-    <Layout title="Testimonies">
+    <Layout title="Testimonials">
       {/* <SimpleGrid columns={[1, null, 2]} spacing={10} mb={10}> */}
       <SimpleGrid
         columns={1}

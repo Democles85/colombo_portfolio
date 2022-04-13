@@ -25,10 +25,11 @@ const Header = () => {
         justifyContent="inherit"
         pb={10}
       >
-        <Image src="/images/logo.png" alt="logo" width={['40%', '40%']} />
+        <Image src="/images/logo.png" alt="logo" width={['90%', '70%']} />
         <Text
+          fontFamily="'Beau Rivage', cursive"
           textAlign="center"
-          fontSize={[28, null, 36]}
+          fontSize={[38, null, 46]}
           color={useColorModeValue('#202020', '#FF8000')}
         >
           Resonate With Yourself

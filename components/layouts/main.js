@@ -9,7 +9,7 @@ const Main = ({ children, router }) => {
     <Box as="main" pb={8}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Colombos Homepage" />
+        <meta name="description" content="Resonate With Yourself" />
         <meta name="author" content="Sixhei Tartari" />
         <meta name="author" content="sixheitartari" />
         <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -22,10 +22,17 @@ const Main = ({ children, router }) => {
         <meta name="twitter:site" content="@LeJhin1" />
         <meta name="twitter:creator" content="@LeJhin1" />
         <meta name="twitter:image" content="/card.png" />
-        <meta property="og:site_name" content="Colombos' Homepage" />
+        <meta
+          property="og:site_name"
+          content="Resonate With Yourself Homepage"
+        />
+        <meta
+          name="keywords"
+          content="Resonate, Yourself, Resonate With Yourself, Colombo, Sixhei, Tartari, Therapy, De-Armoring, dearmoring, de, armoring, tantra, tantra dearmoring, bodywork, "
+        />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/card.png" />
-        <title>Colombos - Homepage</title>
+        <title>Resonate With Yourself - Homepage</title>
       </Head>
 
       <NavBar path={router.asPath} />

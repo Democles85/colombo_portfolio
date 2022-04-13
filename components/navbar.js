@@ -126,6 +126,7 @@ const Navbar = props => {
             <Button rightIcon={<HamburgerIcon />} onClick={onOpen}>
               Menu
             </Button>
+
             <Drawer
               isOpen={isOpen}
               size="full"
@@ -146,6 +147,7 @@ const Navbar = props => {
                   </Text>
                   <DrawerCloseButton />
                 </DrawerHeader>
+
                 {/* Drawer Body */}
                 <DrawerBody>
                   <VStack
@@ -171,7 +173,7 @@ const Navbar = props => {
                         Home
                       </Button>
                     </NextLink>
-                    <NextLink href="/" passHref>
+                    <NextLink href="/about" passHref>
                       <Button
                         onClick={onClose}
                         variant="link"
@@ -181,6 +183,7 @@ const Navbar = props => {
                         About Me
                       </Button>
                     </NextLink>
+
                     <Accordion allowToggle border="transparent" width="100%">
                       <AccordionItem>
                         <h2>
@@ -243,6 +246,7 @@ const Navbar = props => {
                         </AccordionPanel>
                       </AccordionItem>
                     </Accordion>
+
                     <NextLink href="/testimonials" passHref>
                       <Button
                         onClick={onClose}
@@ -265,6 +269,7 @@ const Navbar = props => {
                     </NextLink>
                   </VStack>
                 </DrawerBody>
+
                 <DrawerFooter
                   width="100%"
                   textAlign="center"

@@ -105,7 +105,7 @@ const Home = () => (
         <Paragraph>What you love doing?</Paragraph>
       </Section> */}
 
-      <Section delay={0.3}>
+      <Section delay={0.5}>
         {/* <Heading as="h3" variant="section-title">
           Where to find me
         </Heading>  */}
@@ -177,7 +177,7 @@ const Home = () => (
         </SimpleGrid> */}
 
         <Box align="center" my={4}>
-          <NextLink href="/testimonies">
+          <NextLink href="/about">
             <Button rightIcon={<ChevronRightIcon />} colorScheme="orange">
               About Me
             </Button>
