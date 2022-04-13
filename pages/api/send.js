@@ -1,8 +1,7 @@
 import sgMail from '@sendgrid/mail'
+import 'dotenv/config'
 
-sgMail.setApiKey(
-  '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'
-)
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 const msg = {
   to: 'democleschannel28@gmail.com',
