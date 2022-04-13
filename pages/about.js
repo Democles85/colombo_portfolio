@@ -67,7 +67,7 @@ const About = () => {
             </Paragraph>
           </Box>
 
-          <Box py={5}>
+          <Box pt={5} pb={10}>
             <Heading as="h3" variant="section-title">
               My
             </Heading>
@@ -77,6 +77,7 @@ const About = () => {
               experiment on myself.
             </Paragraph>
           </Box>
+
           <Box
             borderRadius="lg"
             mb={6}
