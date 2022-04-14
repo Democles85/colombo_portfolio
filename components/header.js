@@ -48,7 +48,7 @@ const Header = () => {
           letterSpacing="tight"
         >
           “Do not try to find your home by seeking light, all darkness inside
-          and outside the Universe is part of our home.”{' '}
+          and outside the Universe is part of it.”{' '}
           <Text
             color={useColorModeValue('#FF8000', '#FF8000')}
             fontSize="lg"

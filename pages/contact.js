@@ -2,6 +2,7 @@ import {
   Box,
   Button,
   FormControl,
+  FormErrorMessage,
   FormHelperText,
   FormLabel,
   Input,
@@ -85,10 +86,23 @@ const Contact = () => {
         setShowSuccessMessage(false)
         setShowSuccessMessage(true)
         setButtonText('Send')
+
+        setFirstName('')
+        setEmail('')
+        setMessage('')
+        setSubject('')
+
         return
       }
-      console.log(firstName, email, subject, message)
+      setShowSuccessMessage(true)
+      setShowFailureMessage(false)
+      setButtonText('Send')
+      setFirstName('')
+      setEmail('')
+      setMessage('')
+      setSubject('')
     }
+    console.log(firstName, email, subject, message)
   }
 
   return (
@@ -105,15 +119,20 @@ const Contact = () => {
                 >
                   <FormLabel htmlFor="first-name">First Name</FormLabel>
                   <Input
-                    id="first-name"
+                    id="firstName"
                     placeHolder="First Name"
-                    isRequired
                     value={firstName}
                     onChange={e => {
                       setFirstName(e.target.value)
                     }}
                   />
+                  {errors?.firstName && (
+                    <FormHelperText color={'red.500'}>
+                      Please provide a first name or a nickname.
+                    </FormHelperText>
+                  )}
                 </Box>
+
                 {/* <Box
                 width={formBoxWidth}
                 py={formBoxPaddingY}
@@ -133,12 +152,16 @@ const Contact = () => {
                 <Input
                   id="subject"
                   placeHolder="Subject"
-                  isRequired
                   value={subject}
                   onChange={e => {
                     setSubject(e.target.value)
                   }}
                 />
+                {errors?.subject && (
+                  <FormHelperText color={'red.500'}>
+                    Please provide a subject.
+                  </FormHelperText>
+                )}
               </Box>
               <Box
                 width={formBoxWidth}
@@ -149,12 +172,16 @@ const Contact = () => {
                 <Input
                   id="email"
                   placeHolder="Email"
-                  isRequired
                   value={email}
                   onChange={e => {
                     setEmail(e.target.value)
                   }}
                 />
+                {errors?.email && (
+                  <FormHelperText color={'red.500'}>
+                    Please provide an email address.
+                  </FormHelperText>
+                )}
               </Box>
               <Box
                 width={formBoxWidth}
@@ -164,7 +191,6 @@ const Contact = () => {
                 <FormLabel htmlFor="message">Message</FormLabel>
                 <Textarea
                   placeholder="Type your message"
-                  isRequired
                   isFullWidth
                   id="message"
                   value={message}
@@ -172,6 +198,11 @@ const Contact = () => {
                     setMessage(e.target.value)
                   }}
                 />
+                {errors?.message && (
+                  <FormHelperText color={'red.500'}>
+                    Please leave us a message so that we get back to you.
+                  </FormHelperText>
+                )}
               </Box>
               <Box
                 width="100%"
@@ -180,7 +211,7 @@ const Contact = () => {
                 py={formBoxPaddingY}
               >
                 <Button width="50%" type="submit">
-                  Submit
+                  {buttonText}
                 </Button>
               </Box>
             </FormControl>
