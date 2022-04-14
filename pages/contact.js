@@ -17,6 +17,7 @@ const Contact = () => {
   const formBoxPaddingY = 2.5
   const formBoxPaddingX = 25
   const formBoxWidth = '100%'
+  const emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 
   const [firstName, setFirstName] = useState('')
   const [email, setEmail] = useState('')
@@ -49,7 +50,7 @@ const Contact = () => {
       isValid = false
     }
 
-    if (email.length <= 0) {
+    if (email.length <= 0 || !email.match(emailFormat)) {
       tempErrors['email'] = true
       isValid = false
     }
