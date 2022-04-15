@@ -1,4 +1,8 @@
 import {
+  Alert,
+  AlertDescription,
+  AlertIcon,
+  AlertTitle,
   Box,
   Button,
   FormControl,
@@ -7,7 +11,8 @@ import {
   FormLabel,
   Input,
   Text,
-  Textarea
+  Textarea,
+  useToast
 } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import Layout from '../components/layouts/article'
@@ -18,6 +23,7 @@ const Contact = () => {
   const formBoxPaddingX = 25
   const formBoxWidth = '100%'
   const emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+  const toast = useToast()
 
   const [firstName, setFirstName] = useState('')
   const [email, setEmail] = useState('')
@@ -54,9 +60,8 @@ const Contact = () => {
       tempErrors['email'] = true
       isValid = false
     }
-
     setErrors({ ...tempErrors })
-    console.log('errors', errors)
+    // console.log('errors', errors)
     return isValid
   }
 
@@ -83,7 +88,7 @@ const Contact = () => {
 
       const { error } = await res.json()
       if (error) {
-        console.log(error)
+        // console.log(error)
         setShowSuccessMessage(false)
         setShowSuccessMessage(true)
         setButtonText('Send')
@@ -98,12 +103,13 @@ const Contact = () => {
       setShowSuccessMessage(true)
       setShowFailureMessage(false)
       setButtonText('Send')
+
       setFirstName('')
       setEmail('')
       setMessage('')
       setSubject('')
     }
-    console.log(firstName, email, subject, message)
+    // console.log(firstName, email, subject, message)
   }
 
   return (
@@ -214,6 +220,28 @@ const Contact = () => {
                 <Button width="50%" type="submit">
                   {buttonText}
                 </Button>
+              </Box>
+              <Box
+                width={formBoxWidth}
+                py={formBoxPaddingY}
+                px={formBoxPaddingX}
+              >
+                {showSuccessMessage && (
+                  <Section delay={0.5}>
+                    <Alert status="success" variant="solid" borderRadius="5px">
+                      <AlertIcon />
+                      Your message was sent. Thank you!
+                    </Alert>
+                  </Section>
+                )}
+                {showFailureMessage && (
+                  <Section delay={0.5}>
+                    <Alert status="error" variant="solid" borderRadius="5px">
+                      <AlertIcon />
+                      Oops! Something went wrong, please try again.
+                    </Alert>
+                  </Section>
+                )}
               </Box>
             </FormControl>
           </form>
