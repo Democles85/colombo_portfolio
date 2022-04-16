@@ -43,8 +43,9 @@ const SoundHealing = () => {
         >
           <Text
             color={useColorModeValue('#fcb03b', '#fcb03b')}
-            fontWeight={['light', null, 'medium']}
+            fontWeight="medium"
             fontSize={[16, null, 18]}
+            textAlign="justify"
             letterSpacing="tight"
           >
             “Sound can melt old frozen energy via the vibrations”{' '}
@@ -75,9 +76,10 @@ const SoundHealing = () => {
         >
           <Text
             color={useColorModeValue('#fcb03b', '#fcb03b')}
-            fontWeight={['light', null, 'medium']}
+            fontWeight="medium"
             fontSize={[16, null, 18]}
             letterSpacing="tight"
+            textAlign="justify"
           >
             “Sound has the ability to activate parts of the subconscious brain”{' '}
           </Text>
