@@ -223,7 +223,7 @@ const Contact = () => {
               </Box>
               <Box
                 width={formBoxWidth}
-                py={formBoxPaddingY}
+                my={formBoxPaddingY}
                 px={formBoxPaddingX}
               >
                 {showSuccessMessage && (
