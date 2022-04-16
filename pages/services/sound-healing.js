@@ -61,12 +61,6 @@ const SoundHealing = () => {
             Sound has the ability to activate parts of the subconscious brain,
             which can give access to unconscious memories.
           </P>
-          <br />
-          <P>
-            The use of sound in The Gaia Method is performed either by the
-            practitioner, the client or both. It can also come in the form of
-            tuning forks or singing bowls.
-          </P>
         </Box>
         <Box
           textStyle="h1"
