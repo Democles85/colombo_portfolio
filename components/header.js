@@ -50,7 +50,7 @@ const Header = () => {
           “Do not try to find your home by seeking light, all darkness inside
           and outside the Universe is part of it.”{' '}
           <Text
-            color={useColorModeValue('#FF8000', '#FF8000')}
+            color={useColorModeValue('#fcb03b', '#fcb03b')}
             fontSize="lg"
             fontFamily="M PLUS Rounded 1c, sans-serif"
             fontWeight="light"

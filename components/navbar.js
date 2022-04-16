@@ -207,7 +207,7 @@ const Navbar = props => {
                           justifyContent="center"
                           textAlign="center"
                         >
-                          <NextLink passHref href="/bodywork">
+                          <NextLink passHref href="/works/bodywork">
                             <Button
                               variant="link"
                               onClick={onClose}
@@ -219,7 +219,7 @@ const Navbar = props => {
                               Bodywork
                             </Button>
                           </NextLink>
-                          <NextLink passHref href="/de-armouring">
+                          <NextLink passHref href="/works/de-armouring">
                             <Button
                               variant="link"
                               onClick={onClose}
@@ -231,7 +231,7 @@ const Navbar = props => {
                               De-armouring
                             </Button>
                           </NextLink>
-                          <NextLink passHref href="/tantric-de-armouring">
+                          <NextLink passHref href="/works/tantric-de-armouring">
                             <Button
                               variant="link"
                               onClick={onClose}
@@ -241,6 +241,18 @@ const Navbar = props => {
                               fontSize="18px"
                             >
                               Tantric De-armouring
+                            </Button>
+                          </NextLink>
+                          <NextLink passHref href="/works/sound-healing">
+                            <Button
+                              variant="link"
+                              onClick={onClose}
+                              width="100%"
+                              py="2"
+                              fontWeight="light"
+                              fontSize="18px"
+                            >
+                              Sound Healing
                             </Button>
                           </NextLink>
                         </AccordionPanel>
