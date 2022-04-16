@@ -94,6 +94,9 @@ const Navbar = props => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
+          <LinkItem href="/" path={path}>
+            Home
+          </LinkItem>
           <LinkItem href="/about" path={path}>
             About Me
           </LinkItem>
@@ -142,7 +145,7 @@ const Navbar = props => {
                 height="100% !important"
               >
                 <DrawerHeader>
-                  <Text textAlign="center" color="#ff8000">
+                  <Text textAlign="center" color="#fcb03b">
                     Resonate With Yourself
                   </Text>
                   <DrawerCloseButton />
@@ -153,7 +156,7 @@ const Navbar = props => {
                   <VStack
                     divider={
                       <StackDivider
-                        borderColor={useColorModeValue('#202023', '#ff8000')}
+                        borderColor={useColorModeValue('#202023', '#fcb03b')}
                       />
                     }
                     spacing={5}
@@ -207,7 +210,7 @@ const Navbar = props => {
                           justifyContent="center"
                           textAlign="center"
                         >
-                          <NextLink passHref href="/works/bodywork">
+                          <NextLink passHref href="/services/bodywork">
                             <Button
                               variant="link"
                               onClick={onClose}
@@ -219,7 +222,7 @@ const Navbar = props => {
                               Bodywork
                             </Button>
                           </NextLink>
-                          <NextLink passHref href="/works/de-armouring">
+                          <NextLink passHref href="/services/de-armouring">
                             <Button
                               variant="link"
                               onClick={onClose}
@@ -231,7 +234,10 @@ const Navbar = props => {
                               De-armouring
                             </Button>
                           </NextLink>
-                          <NextLink passHref href="/works/tantric-de-armouring">
+                          <NextLink
+                            passHref
+                            href="/services/tantric-de-armouring"
+                          >
                             <Button
                               variant="link"
                               onClick={onClose}
@@ -243,7 +249,7 @@ const Navbar = props => {
                               Tantric De-armouring
                             </Button>
                           </NextLink>
-                          <NextLink passHref href="/works/sound-healing">
+                          <NextLink passHref href="/services/sound-healing">
                             <Button
                               variant="link"
                               onClick={onClose}

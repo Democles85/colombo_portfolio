@@ -177,9 +177,9 @@ const Home = () => (
         </SimpleGrid> */}
 
         <Box align="center" my={4}>
-          <NextLink href="/about">
+          <NextLink href="/services">
             <Button rightIcon={<ChevronRightIcon />} colorScheme="orange">
-              About Me
+              Services
             </Button>
           </NextLink>
         </Box>
