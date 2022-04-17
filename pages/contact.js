@@ -124,10 +124,10 @@ const Contact = () => {
                   py={formBoxPaddingY}
                   px={formBoxPaddingX}
                 >
-                  <FormLabel htmlFor="first-name">First Name</FormLabel>
+                  <FormLabel htmlFor="first-name">Name / Nickname</FormLabel>
                   <Input
                     id="firstName"
-                    placeHolder="First Name"
+                    placeHolder="Name / Nickname"
                     value={firstName}
                     onChange={e => {
                       setFirstName(e.target.value)
@@ -135,7 +135,7 @@ const Contact = () => {
                   />
                   {errors?.firstName && (
                     <FormHelperText color={'red.500'}>
-                      Please provide a first name or a nickname.
+                      Please provide a name or a nickname.
                     </FormHelperText>
                   )}
                 </Box>
