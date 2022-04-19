@@ -7,6 +7,7 @@ import thumbBodywork from '../public/images/works/bodywork_thumbnail.jpg'
 import thumbDeArmouring from '../public/images/works/de_armoring_thumbnail.png'
 import thumbTantricDeArmouring from '../public/images/works/tantric_de_armouring_thumbnail.jpg'
 import thumbSoundHealing from '../public/images/works/sound_healing_thumbnail.jpg'
+import thumbComingSoon from '../public/images/works/coming_soon_thumb.png'
 import thumbDemoclesNews from '../public/images/works/democles_news_thumnail.png'
 import thumbMathsGame from '../public/images/works/maths_game_thumbnail.png'
 import thumbCalculator from '../public/images/works/calculator_thumbanil.png'
@@ -25,7 +26,7 @@ const Services = () => (
           <WorkGridItem
             id="bodywork"
             title="Bodywork"
-            thumbnail={thumbBodywork}
+            thumbnail={thumbComingSoon}
           >
             Bodywork is a collective term that refers to alternative medical
             practices involving hands-on manipulation of the body...
@@ -35,7 +36,7 @@ const Services = () => (
           <WorkGridItem
             id="authentic-tantra"
             title="Authentic Tantra"
-            thumbnail={thumbTantricDeArmouring}
+            thumbnail={thumbComingSoon}
           >
             De-armouring is a way to release jams, stagnant energy, emotions and
             tension from the body...

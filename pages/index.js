@@ -63,12 +63,7 @@ const Home = () => (
           <Heading as="h3" variant="header-title">
             How `Resonate With Yourself` came to life
           </Heading>
-          <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-            repudiandae ullam nam quod earum, possimus reprehenderit ducimus
-            eligendi vero sapiente impedit sed labore dicta? Ab amet dolorum
-            maiores quam assumenda.
-          </Paragraph>
+          <Paragraph>Coming soon...</Paragraph>
         </Box>
       </Section>
 
@@ -77,12 +72,7 @@ const Home = () => (
           <Heading as="h3" variant="header-title">
             What `Resonate With Yourself` supports
           </Heading>
-          <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-            repudiandae ullam nam quod earum, possimus reprehenderit ducimus
-            eligendi vero sapiente impedit sed labore dicta? Ab amet dolorum
-            maiores quam assumenda.
-          </Paragraph>
+          <Paragraph>Coming soon...</Paragraph>
         </Box>
       </Section>
     </Container>

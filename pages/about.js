@@ -86,7 +86,7 @@ const About = () => {
             bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
           >
             <Text
-              color={useColorModeValue('#202023', '#FF8000')}
+              color={useColorModeValue('#202023', '#fcb03b')}
               fontWeight="bold"
             >
               Within me I hold both ends of the spectrum:
