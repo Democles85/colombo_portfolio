@@ -38,10 +38,7 @@ const Services = () => (
             id="authentic-tantra"
             title="Authentic Tantra"
             thumbnail={thumbAuthenticTantra}
-          >
-            Tantra is a holistic lifestyle practice for integrating body, mind &
-            sex so you can experience more peace, joy, love and happiness...
-          </WorkGridItem>
+          ></WorkGridItem>
         </Section>
         <Section>
           <WorkGridItem
@@ -84,13 +81,10 @@ const Services = () => (
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           <Section>
             <WorkGridItem
-              id="sound-healing"
-              title="Sound Healing"
+              id="advanced-energetic-bodywork"
+              title="Advanced Energetic Bodywork"
               thumbnail={thumbAdvancedEnergeticBodywork}
-            >
-              Sound has the ability to activate parts of the subconscious brain,
-              which can give access to unconscious memories...
-            </WorkGridItem>
+            ></WorkGridItem>
           </Section>
         </SimpleGrid>
       </Section>

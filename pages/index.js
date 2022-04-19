@@ -57,7 +57,7 @@ const Home = () => (
         </Text>
       </Box>
     </Section>
-    <Container>
+    {/* <Container>
       <Section delay={0.2}>
         <Box>
           <Heading as="h3" variant="header-title">
@@ -75,7 +75,7 @@ const Home = () => (
           <Paragraph>Coming soon...</Paragraph>
         </Box>
       </Section>
-    </Container>
+    </Container> */}
     {/* <Box
         borderRadius="lg"
         mb={6}
