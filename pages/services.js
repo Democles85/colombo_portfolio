@@ -38,8 +38,8 @@ const Services = () => (
             title="Authentic Tantra"
             thumbnail={thumbComingSoon}
           >
-            De-armouring is a way to release jams, stagnant energy, emotions and
-            tension from the body...
+            Tantra is a holistic lifestyle practice for integrating body, mind &
+            sex so you can experience more peace, joy, love and happiness...
           </WorkGridItem>
         </Section>
         <Section>
