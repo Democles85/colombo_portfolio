@@ -3,10 +3,10 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 
-import thumbBodywork from '../public/images/works/bodywork_thumbnail.jpg'
-import thumbDeArmouring from '../public/images/works/de_armoring_thumbnail.png'
-import thumbTantricDeArmouring from '../public/images/works/tantric_de_armouring_thumbnail.jpg'
-import thumbSoundHealing from '../public/images/works/sound_healing_thumbnail.jpg'
+import thumbBodywork from '../public/images/works/thumb_1.jpeg'
+import thumbAuthenticTantra from '../public/images/works/thumb_2.jpeg'
+import thumbDeArmouring from '../public/images/works/thumb_3.jpeg'
+import thumbSoundHealing from '../public/images/works/thumb_4.jpeg'
 import thumbComingSoon from '../public/images/works/coming_soon_thumb.png'
 import thumbDemoclesNews from '../public/images/works/democles_news_thumnail.png'
 import thumbMathsGame from '../public/images/works/maths_game_thumbnail.png'
@@ -26,7 +26,7 @@ const Services = () => (
           <WorkGridItem
             id="bodywork"
             title="Bodywork"
-            thumbnail={thumbComingSoon}
+            thumbnail={thumbBodywork}
           >
             Bodywork is a collective term that refers to alternative medical
             practices involving hands-on manipulation of the body...
@@ -36,7 +36,7 @@ const Services = () => (
           <WorkGridItem
             id="authentic-tantra"
             title="Authentic Tantra"
-            thumbnail={thumbComingSoon}
+            thumbnail={thumbAuthenticTantra}
           >
             Tantra is a holistic lifestyle practice for integrating body, mind &
             sex so you can experience more peace, joy, love and happiness...
@@ -46,7 +46,7 @@ const Services = () => (
           <WorkGridItem
             id="de-armouring"
             title="De Armouring"
-            thumbnail={thumbComingSoon}
+            thumbnail={thumbDeArmouring}
           >
             De-armouring is a way to release jams, stagnant energy, emotions and
             tension from the body...
