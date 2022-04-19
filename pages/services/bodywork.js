@@ -23,8 +23,8 @@ const Bodywork = () => {
         >
           <Text
             color={useColorModeValue('#202020', '#eeeeee')}
-            fontWeight={['medium', null, 'bold']}
-            fontSize={[18, null, 24]}
+            fontWeight={'medium'}
+            fontSize={[18, null, 20]}
             letterSpacing="tight"
           >
             “If we are simply an extension of the universe then surely we also

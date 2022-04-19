@@ -42,6 +42,16 @@ const Services = () => (
             tension from the body...
           </WorkGridItem>
         </Section>
+        <Section>
+          <WorkGridItem
+            id="de-armouring"
+            title="De Armouring"
+            thumbnail={thumbComingSoon}
+          >
+            De-armouring is a way to release jams, stagnant energy, emotions and
+            tension from the body...
+          </WorkGridItem>
+        </Section>
       </SimpleGrid>
 
       <Section delay={0.4}>
