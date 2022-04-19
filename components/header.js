@@ -23,7 +23,6 @@ const Header = () => {
         flexDirection="inherit"
         alignItems="inherit"
         justifyContent="inherit"
-        pb={10}
       >
         <Image src="/images/logo.png" alt="logo" width={['90%', '70%']} />
         <Text
@@ -35,7 +34,7 @@ const Header = () => {
           Resonate With Yourself
         </Text>
       </Box>
-      <Box
+      {/* <Box
         textStyle="h1"
         borderRadius="lg"
         p={5}
@@ -59,7 +58,7 @@ const Header = () => {
             – Colombo
           </Text>
         </Text>
-      </Box>
+      </Box> */}
     </HeaderBox>
   )
 }

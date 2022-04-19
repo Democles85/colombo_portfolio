@@ -234,10 +234,7 @@ const Navbar = props => {
                               De-armouring
                             </Button>
                           </NextLink>
-                          <NextLink
-                            passHref
-                            href="/services/tantric-de-armouring"
-                          >
+                          <NextLink passHref href="/services/authentic-tantra">
                             <Button
                               variant="link"
                               onClick={onClose}
@@ -246,7 +243,7 @@ const Navbar = props => {
                               fontWeight="light"
                               fontSize="18px"
                             >
-                              Tantric De-armouring
+                              Authentic Tantra
                             </Button>
                           </NextLink>
                           <NextLink passHref href="/services/sound-healing">
@@ -259,6 +256,21 @@ const Navbar = props => {
                               fontSize="18px"
                             >
                               Sound Healing
+                            </Button>
+                          </NextLink>
+                          <NextLink
+                            passHref
+                            href="/services/advanced-energetic-bodywork"
+                          >
+                            <Button
+                              variant="link"
+                              onClick={onClose}
+                              width="100%"
+                              py="2"
+                              fontWeight="light"
+                              fontSize="18px"
+                            >
+                              Advanced Energetic Bodywork
                             </Button>
                           </NextLink>
                         </AccordionPanel>

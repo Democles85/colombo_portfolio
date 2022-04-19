@@ -10,7 +10,8 @@ import {
   List,
   ListItem,
   Icon,
-  useColorModeValue
+  useColorModeValue,
+  Text
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
@@ -29,8 +30,63 @@ import thumbInkdrop from '../public/images/works/shoppocles_thumbnail.png'
 
 const Home = () => (
   <Layout>
+    <Section>
+      <Box
+        textStyle="h1"
+        borderRadius="lg"
+        p={5}
+        bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+      >
+        <Text
+          color={useColorModeValue('#202020', '#eeeeee')}
+          fontWeight={['medium', null, 'bold']}
+          fontSize={[18, null, 24]}
+          letterSpacing="tight"
+        >
+          “Do not try to find your home by seeking light, all darkness inside
+          and outside the Universe is part of it.”{' '}
+          <Text
+            color={useColorModeValue('#fcb03b', '#fcb03b')}
+            fontSize="lg"
+            fontFamily="M PLUS Rounded 1c, sans-serif"
+            fontWeight="light"
+            textAlign="right"
+          >
+            – Colombo
+          </Text>
+        </Text>
+      </Box>
+    </Section>
     <Container>
-      {/* <Box
+      <Section delay={0.2}>
+        <Box>
+          <Heading as="h3" variant="header-title">
+            How `Resonate With Yourself` came to life
+          </Heading>
+          <Paragraph>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+            repudiandae ullam nam quod earum, possimus reprehenderit ducimus
+            eligendi vero sapiente impedit sed labore dicta? Ab amet dolorum
+            maiores quam assumenda.
+          </Paragraph>
+        </Box>
+      </Section>
+
+      <Section delay={0.4}>
+        <Box>
+          <Heading as="h3" variant="header-title">
+            What `Resonate With Yourself` supports
+          </Heading>
+          <Paragraph>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+            repudiandae ullam nam quod earum, possimus reprehenderit ducimus
+            eligendi vero sapiente impedit sed labore dicta? Ab amet dolorum
+            maiores quam assumenda.
+          </Paragraph>
+        </Box>
+      </Section>
+    </Container>
+    {/* <Box
         borderRadius="lg"
         mb={6}
         p={3}
@@ -40,7 +96,7 @@ const Home = () => (
         Hello, I&apos;m...
       </Box> */}
 
-      {/* <Box display={{ md: 'flex' }}>
+    {/* <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
             Name Surname
@@ -66,7 +122,7 @@ const Home = () => (
         </Box>
       </Box> */}
 
-      {/* <Section delay={0.1}>
+    {/* <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
           Resume
         </Heading>
@@ -80,7 +136,7 @@ const Home = () => (
         </Box>
       </Section> */}
 
-      {/* <Section delay={0.2}>
+    {/* <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
           Bio
         </Heading>
@@ -98,19 +154,19 @@ const Home = () => (
         </BioSection>
       </Section> */}
 
-      {/* <Section delay={0.3}>
+    {/* <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
           I ♥
         </Heading>
         <Paragraph>What you love doing?</Paragraph>
       </Section> */}
 
-      <Section delay={0.5}>
-        {/* <Heading as="h3" variant="section-title">
+    <Section delay={0.5}>
+      {/* <Heading as="h3" variant="section-title">
           Where to find me
         </Heading>  */}
-        {/* <List> */}
-        {/* <ListItem>
+      {/* <List> */}
+      {/* <ListItem>
             <Link href="https://github.com/Democles85" target="_blank">
               <Button
                 variant="ghost"
@@ -121,7 +177,7 @@ const Home = () => (
               </Button>
             </Link>
           </ListItem> */}
-        {/* <ListItem>
+      {/* <ListItem>
             <Link href="https://twitter.com/LeJhin1" target="_blank">
               <Button
                 variant="ghost"
@@ -159,7 +215,7 @@ const Home = () => (
           </ListItem>
         </List> */}
 
-        {/* <SimpleGrid columns={[1, 2, 2]} gap={6}>
+      {/* <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
             href="https://www.youtube.com/watch?v=O0RKS9592-s"
             title="Fav Song of the Month"
@@ -176,15 +232,14 @@ const Home = () => (
           </GridItem>
         </SimpleGrid> */}
 
-        <Box align="center" my={4}>
-          <NextLink href="/services">
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="orange">
-              Services
-            </Button>
-          </NextLink>
-        </Box>
-      </Section>
-    </Container>
+      <Box align="center" my={4}>
+        <NextLink href="/services">
+          <Button rightIcon={<ChevronRightIcon />} colorScheme="orange">
+            Services
+          </Button>
+        </NextLink>
+      </Box>
+    </Section>
   </Layout>
 )
 

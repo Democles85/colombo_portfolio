@@ -3,9 +3,10 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 
+import thumbBodywork from '../public/images/works/bodywork_thumbnail.jpg'
 import thumbDeArmouring from '../public/images/works/de_armoring_thumbnail.png'
 import thumbTantricDeArmouring from '../public/images/works/tantric_de_armouring_thumbnail.jpg'
-import thumbSoundHealing from '../public/images/works/sound_healing_thumbnail.png'
+import thumbSoundHealing from '../public/images/works/sound_healing_thumbnail.jpg'
 import thumbDemoclesNews from '../public/images/works/democles_news_thumnail.png'
 import thumbMathsGame from '../public/images/works/maths_game_thumbnail.png'
 import thumbCalculator from '../public/images/works/calculator_thumbanil.png'
@@ -14,26 +15,26 @@ import thumbRSAProject from '../public/images/works/rsa_algorithm_thumbnail.jpg'
 const Services = () => (
   <Layout title="Services">
     <Container>
-      {/* Personal Projects | Section 1 */}
+      {/* Bodywork / Section 1 */}
       <Heading as="h3" fontSize={20} mb={4}>
-        De-Armouring
+        Bodywork
       </Heading>
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
           <WorkGridItem
-            id="de-armouring"
-            title="De-Armouring"
-            thumbnail={thumbDeArmouring}
+            id="bodywork"
+            title="Bodywork"
+            thumbnail={thumbBodywork}
           >
-            De-armouring is a way to release jams, stagnant energy, emotions and
-            tension from the body...
+            Bodywork is a collective term that refers to alternative medical
+            practices involving hands-on manipulation of the body...
           </WorkGridItem>
         </Section>
         <Section>
           <WorkGridItem
-            id="tantric-de-armouring"
-            title="Tantric De-Armouring"
+            id="authentic-tantra"
+            title="Authentic Tantra"
             thumbnail={thumbTantricDeArmouring}
           >
             De-armouring is a way to release jams, stagnant energy, emotions and

@@ -9,10 +9,37 @@ import React from 'react'
 import Layout from '../../components/layouts/article'
 import { Title } from '../../components/service'
 import P from '../../components/paragraph'
+import Section from '../../components/section'
 
 const SoundHealing = () => {
   return (
     <Layout>
+      <Section>
+        <Box
+          textStyle="h1"
+          borderRadius="lg"
+          p={5}
+          bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+        >
+          <Text
+            color={useColorModeValue('#202020', '#eeeeee')}
+            fontWeight={['medium', null, 'bold']}
+            fontSize={[18, null, 24]}
+            letterSpacing="tight"
+          >
+            “Sound is the medicine of the future.”{' '}
+            <Text
+              color={useColorModeValue('#fcb03b', '#fcb03b')}
+              fontSize="lg"
+              fontFamily="M PLUS Rounded 1c, sans-serif"
+              fontWeight="light"
+              textAlign="right"
+            >
+              – Edgar Cayce
+            </Text>
+          </Text>
+        </Box>
+      </Section>
       <Container>
         <Title>Sound Healing</Title>
         {/* Section 1 */}
