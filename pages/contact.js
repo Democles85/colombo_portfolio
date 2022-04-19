@@ -195,7 +195,7 @@ const Contact = () => {
                 py={formBoxPaddingY}
                 px={formBoxPaddingX}
               >
-                <FormLabel htmlFor="message">Message</FormLabel>
+                <FormLabel htmlFor="message">Message / Questions</FormLabel>
                 <Textarea
                   placeholder="Type your message"
                   isFullWidth

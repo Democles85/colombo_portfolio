@@ -39,7 +39,7 @@ import React from 'react'
 
 const LinkItem = ({ href, path, _target, children, ...props }) => {
   const active = path === href
-  const inactiveColor = useColorModeValue('#FF8000', '#FF8000')
+  const inactiveColor = useColorModeValue('#fcb03b', '#fcb03b')
   return (
     <NextLink href={href} passHref>
       <Link
