@@ -42,7 +42,7 @@ const DeArmouring = () => {
       </Section>
       <Section delay={0.3}>
         <Box
-          borderRadius="20px"
+          borderRadius="10px"
           background={useColorModeValue('#fcb03b', '#202023')}
           boxShadow={`5px 5px 10px ${useColorModeValue(
             '#7c561d',
@@ -54,7 +54,7 @@ const DeArmouring = () => {
             loading="lazy"
             src={DeArmouringImage}
             alt="De Armouring"
-            borderRadius="20px"
+            borderRadius={['8px', '5px']}
           />
         </Box>
 
