@@ -22,7 +22,7 @@ const AdvancedEnergeticBodywork = () => {
             '#7c561d',
             '#0d0d0e'
           )}, -5px -5px 10px ${useColorModeValue('#ffc980', '#333338')}`} //Can do inset for pressed
-          padding={3}
+          padding={[2, 3]}
         >
           <Image
             loading="lazy"
