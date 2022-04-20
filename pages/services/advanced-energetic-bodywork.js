@@ -16,19 +16,19 @@ const AdvancedEnergeticBodywork = () => {
     <Layout title="Advanced Energetic Bodywork">
       <Section>
         <Box
-          borderRadius="10px"
-          background={useColorModeValue('#fcb03b', '#202023')}
-          boxShadow={`5px 5px 10px ${useColorModeValue(
-            '#7c561d',
-            '#0d0d0e'
-          )}, -5px -5px 10px ${useColorModeValue('#ffc980', '#333338')}`} //Can do inset for pressed
-          padding={[2, 3]}
+        // borderRadius="10px"
+        // background={useColorModeValue('#fcb03b', '#202023')}
+        // boxShadow={`5px 5px 10px ${useColorModeValue(
+        //   '#7c561d',
+        //   '#0d0d0e'
+        // )}, -5px -5px 10px ${useColorModeValue('#ffc980', '#333338')}`} //Can do inset for pressed
+        // padding={[2, 3]}
         >
           <Image
             loading="lazy"
             src={advancedEnergeticBodyworkImage}
             alt="Advanced Energetic Bodywork"
-            borderRadius={['8px', '5px']}
+            borderRadius={'lg'}
           />
         </Box>
         <Container>

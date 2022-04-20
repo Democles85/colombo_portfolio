@@ -35,15 +35,7 @@ const Home = () => (
     </Section>
 
     <Section delay={0.5}>
-      <Box
-        borderRadius="10px"
-        background={useColorModeValue('#fcb03b', '#202023')}
-        boxShadow={`5px 5px 10px ${useColorModeValue(
-          '#7c561d',
-          '#0d0d0e'
-        )}, -5px -5px 10px ${useColorModeValue('#ffc980', '#333338')}`} //Can do inset for pressed
-        padding={[2, 3]}
-      >
+      <Box>
         <Image
           loading="lazy"
           src="/images/works/home_thumbnail.jpg"

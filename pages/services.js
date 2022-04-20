@@ -6,7 +6,7 @@ import { WorkGridItem } from '../components/grid-item'
 import thumbBodywork from '../public/images/works/thumb_1.jpeg'
 import thumbAuthenticTantra from '../public/images/works/thumb_2.jpeg'
 import thumbDeArmouring from '../public/images/works/thumb_3.jpeg'
-import thumbSoundHealing from '../public/images/works/thumb_4.jpeg'
+import thumbSoundHealing from '../public/images/works/thumb_6.jpeg'
 import thumbAdvancedEnergeticBodywork from '../public/images/works/thumb_5.jpeg'
 import thumbComingSoon from '../public/images/works/coming_soon_thumb.png'
 
