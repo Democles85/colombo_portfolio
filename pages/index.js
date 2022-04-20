@@ -1,5 +1,5 @@
 import NextLink from 'next/link'
-import { Box, Button, useColorModeValue, Text } from '@chakra-ui/react'
+import { Box, Button, useColorModeValue, Text, Image } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
@@ -35,6 +35,22 @@ const Home = () => (
     </Section>
 
     <Section delay={0.5}>
+      <Box
+        borderRadius="20px"
+        background={useColorModeValue('#fcb03b', '#202023')}
+        boxShadow={`5px 5px 10px ${useColorModeValue(
+          '#7c561d',
+          '#0d0d0e'
+        )}, -5px -5px 10px ${useColorModeValue('#ffc980', '#333338')}`} //Can do inset for pressed
+        padding={3}
+      >
+        <Image
+          loading="lazy"
+          src="/images/works/home_thumbnail.jpg"
+          alt="De Armouring"
+          borderRadius="20px"
+        />
+      </Box>
       <Box align="center" my={4}>
         <NextLink href="/services">
           <Button rightIcon={<ChevronRightIcon />} colorScheme="orange">
