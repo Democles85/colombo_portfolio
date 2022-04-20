@@ -1,29 +1,25 @@
 import {
   Alert,
-  AlertDescription,
   AlertIcon,
-  AlertTitle,
   Box,
   Button,
   FormControl,
-  FormErrorMessage,
   FormHelperText,
   FormLabel,
+  Image,
   Input,
-  Text,
-  Textarea,
-  useToast
+  Textarea
 } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 
 const Contact = () => {
+  const ContactThumbnail = '/images/works/contact_thumbnail.jpg'
   const formBoxPaddingY = 2.5
   const formBoxPaddingX = 25
   const formBoxWidth = '100%'
   const emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-  const toast = useToast()
 
   const [firstName, setFirstName] = useState('')
   const [email, setEmail] = useState('')
@@ -114,6 +110,24 @@ const Contact = () => {
 
   return (
     <Layout title="Contact">
+      <Section>
+        <Box
+        // borderRadius="10px"
+        // background={useColorModeValue('#fcb03b', '#202023')}
+        // boxShadow={`5px 5px 10px ${useColorModeValue(
+        //   '#7c561d',
+        //   '#0d0d0e'
+        // )}, -5px -5px 10px ${useColorModeValue('#ffc980', '#333338')}`} //Can do inset for pressed
+        // padding={[2, 3]}
+        >
+          <Image
+            loading="lazy"
+            src={ContactThumbnail}
+            alt="Sound Healing"
+            borderRadius={'lg'}
+          />
+        </Box>
+      </Section>
       <Section delay={0.2}>
         <Box>
           <form onSubmit={handleSubmit}>
