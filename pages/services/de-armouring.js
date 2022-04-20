@@ -12,7 +12,7 @@ import P from '../../components/paragraph'
 import Section from '../../components/section'
 import { Title } from '../../components/service'
 
-const Work = () => {
+const DeArmouring = () => {
   const DeArmouringImage = '/images/works/thumb_3.jpeg'
   return (
     <Layout title="De-Armouring">
@@ -76,4 +76,4 @@ const Work = () => {
   )
 }
 
-export default Work
+export default DeArmouring

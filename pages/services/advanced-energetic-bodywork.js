@@ -10,7 +10,7 @@ import Layout from '../../components/layouts/article'
 import Section from '../../components/section'
 import { Title } from '../../components/service'
 
-const advancedEnergeticBodywork = () => {
+const AdvancedEnergeticBodywork = () => {
   const advancedEnergeticBodyworkImage = '/images/works/thumb_5.jpeg'
   return (
     <Layout title="Advanced Energetic Bodywork">
@@ -41,4 +41,4 @@ const advancedEnergeticBodywork = () => {
   )
 }
 
-export default advancedEnergeticBodywork
+export default AdvancedEnergeticBodywork

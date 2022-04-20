@@ -11,7 +11,7 @@ import P from '../../components/paragraph'
 import Section from '../../components/section'
 import { Title } from '../../components/service'
 
-const authenticTantra = () => {
+const AuthenticTantra = () => {
   const AuthenticTantraImage = '/images/works/thumb_2.jpeg'
   return (
     <Layout title="Authentic Tantra">
@@ -50,4 +50,4 @@ const authenticTantra = () => {
   )
 }
 
-export default authenticTantra
+export default AuthenticTantra
