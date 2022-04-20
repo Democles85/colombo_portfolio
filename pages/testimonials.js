@@ -8,6 +8,7 @@ import {
   useColorModeValue,
   WrapItem
 } from '@chakra-ui/react'
+import P from '../components/paragraph'
 import React from 'react'
 import Layout from '../components/layouts/article'
 import data from '../utils/data'
@@ -61,7 +62,19 @@ const Testimonials = () => {
               </GridItem>
             </WrapItem>
             {/* Content */}
-            <GridItem
+            {testimonies.content?.map(content => (
+              <GridItem
+                key={content.paragraph}
+                w="100%"
+                md={4}
+                h="100%"
+                px={[5, 15, 50]}
+              >
+                <P>{content.text}</P>
+                <br />
+              </GridItem>
+            ))}
+            {/* <GridItem
               key={testimonies.content}
               w="100%"
               md={4}
@@ -71,7 +84,7 @@ const Testimonials = () => {
               <Text textAlign="center" fontSize={[16, null, 18]}>
                 {testimonies.content}
               </Text>
-            </GridItem>
+            </GridItem> */}
           </Grid>
         ))}
       </SimpleGrid>
