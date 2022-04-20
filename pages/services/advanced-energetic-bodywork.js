@@ -1,21 +1,20 @@
 import {
   Box,
   Container,
-  Heading,
+  Text,
   Image,
   useColorModeValue
 } from '@chakra-ui/react'
 import React from 'react'
 import Layout from '../../components/layouts/article'
-import P from '../../components/paragraph'
 import Section from '../../components/section'
 import { Title } from '../../components/service'
 
-const authenticTantra = () => {
-  const AuthenticTantraImage = '/images/works/thumb_2.jpeg'
+const advancedEnergeticBodywork = () => {
+  const advancedEnergeticBodyworkImage = '/images/works/thumb_5.jpeg'
   return (
-    <Layout title="Authentic Tantra">
-      <Section delay={0.3}>
+    <Layout title="Advanced Energetic Bodywork">
+      <Section>
         <Box
           borderRadius="10px"
           background={useColorModeValue('#fcb03b', '#202023')}
@@ -27,22 +26,14 @@ const authenticTantra = () => {
         >
           <Image
             loading="lazy"
-            src={AuthenticTantraImage}
-            alt="Authentic Tantra"
+            src={advancedEnergeticBodyworkImage}
+            alt="Advanced Energetic Bodywork"
             borderRadius="10px"
           />
         </Box>
         <Container>
           <Box py={5}>
-            <Title>Authentic Tantra</Title>
-            <Heading as="h3" my={4} fontSize={20}>
-              What is authentic tantra?
-            </Heading>
-            <P>
-              Tantra Massage is an energy form of massage first and foremost.
-              Key energy channels are purified, energy centers are activated and
-              innate energy sources are channeled in a specific way.
-            </P>
+            <Title>Advanced Energetic Bodywork</Title>
           </Box>
         </Container>
       </Section>
@@ -50,4 +41,4 @@ const authenticTantra = () => {
   )
 }
 
-export default authenticTantra
+export default advancedEnergeticBodywork

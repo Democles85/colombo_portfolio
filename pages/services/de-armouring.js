@@ -2,6 +2,7 @@ import {
   Box,
   Container,
   Heading,
+  Image,
   Text,
   useColorModeValue
 } from '@chakra-ui/react'
@@ -12,6 +13,7 @@ import Section from '../../components/section'
 import { Title } from '../../components/service'
 
 const Work = () => {
+  const DeArmouringImage = '/images/works/thumb_3.jpeg'
   return (
     <Layout title="De-Armouring">
       <Section>
@@ -38,10 +40,27 @@ const Work = () => {
           </Text>
         </Box>
       </Section>
-      <Section>
+      <Section delay={0.3}>
+        <Box
+          borderRadius="20px"
+          background={useColorModeValue('#fcb03b', '#202023')}
+          boxShadow={`5px 5px 10px ${useColorModeValue(
+            '#7c561d',
+            '#0d0d0e'
+          )}, -5px -5px 10px ${useColorModeValue('#ffc980', '#333338')}`} //Can do inset for pressed
+          padding={3}
+        >
+          <Image
+            loading="lazy"
+            src={DeArmouringImage}
+            alt="De Armouring"
+            borderRadius="20px"
+          />
+        </Box>
+
         <Container>
-          <Title>De-Armouring</Title>
-          <Box pb={5}>
+          <Box py={5}>
+            <Title>De-Armouring</Title>
             <Heading as="h3" my={4} fontSize={20}>
               What does De-Armouring accomplish?
             </Heading>

@@ -2,6 +2,7 @@ import {
   Box,
   Container,
   Heading,
+  Image,
   Text,
   useColorModeValue
 } from '@chakra-ui/react'
@@ -12,8 +13,9 @@ import { Title } from '../../components/service'
 import P from '../../components/paragraph'
 
 const Bodywork = () => {
+  const BodyworkImage = '/images/works/thumb_1.jpeg'
   return (
-    <Layout>
+    <Layout title="Bodywork">
       <Section>
         <Box
           textStyle="h1"
@@ -39,9 +41,26 @@ const Bodywork = () => {
         </Box>
       </Section>
       <Section>
+        <Box
+          borderRadius="10px"
+          background={useColorModeValue('#fcb03b', '#202023')}
+          boxShadow={`5px 5px 10px ${useColorModeValue(
+            '#7c561d',
+            '#0d0d0e'
+          )}, -5px -5px 10px ${useColorModeValue('#ffc980', '#333338')}`} //Can do inset for pressed
+          padding={3}
+        >
+          <Image
+            loading="lazy"
+            src={BodyworkImage}
+            alt="Bodywork"
+            borderRadius="10px"
+          />
+        </Box>
+
         <Container>
-          <Title>Bodywork</Title>
-          <Box pb={5}>
+          <Box py={5}>
+            <Title>Bodywork</Title>
             <Heading as="h3" my={4} fontSize={20}>
               A brief explanation of how de-armouring came to life.
             </Heading>

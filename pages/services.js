@@ -1,4 +1,4 @@
-import { Container, Heading, SimpleGrid, Divider, Link } from '@chakra-ui/react'
+import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
@@ -9,10 +9,6 @@ import thumbDeArmouring from '../public/images/works/thumb_3.jpeg'
 import thumbSoundHealing from '../public/images/works/thumb_4.jpeg'
 import thumbAdvancedEnergeticBodywork from '../public/images/works/thumb_5.jpeg'
 import thumbComingSoon from '../public/images/works/coming_soon_thumb.png'
-import thumbDemoclesNews from '../public/images/works/democles_news_thumnail.png'
-import thumbMathsGame from '../public/images/works/maths_game_thumbnail.png'
-import thumbCalculator from '../public/images/works/calculator_thumbanil.png'
-import thumbRSAProject from '../public/images/works/rsa_algorithm_thumbnail.jpg'
 
 const Services = () => (
   <Layout title="Services">
@@ -91,16 +87,15 @@ const Services = () => (
       {/* Works | Section 2 */}
       {/* <Heading as="h3" fontSize={20} mb={4}>
         Sound Healing
-      </Heading> */}
+      </Heading>
 
-      {/* Final Section | Section 4 */}
       <Section delay={0.8}>
         <Divider my={6} />
 
         <Heading as="h3" fontSize={20} mb={4}>
           More Coming Soon...
         </Heading>
-      </Section>
+      </Section> */}
     </Container>
   </Layout>
 )

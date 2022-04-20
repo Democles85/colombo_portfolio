@@ -2,6 +2,7 @@ import {
   Box,
   Container,
   Heading,
+  Image,
   Text,
   useColorModeValue
 } from '@chakra-ui/react'
@@ -12,8 +13,9 @@ import P from '../../components/paragraph'
 import Section from '../../components/section'
 
 const SoundHealing = () => {
+  const SoundHealingImage = '/images/works/thumb_4.jpeg'
   return (
-    <Layout>
+    <Layout title="Sound Healing">
       <Section>
         <Box
           textStyle="h1"
@@ -40,72 +42,93 @@ const SoundHealing = () => {
           </Text>
         </Box>
       </Section>
-      <Container>
-        <Title>Sound Healing</Title>
-        {/* Section 1 */}
-        <Box pb={5}>
-          <Heading as="h3" fontSize={20} my={4}>
-            Sound is more than vibrations
-          </Heading>
-          <P>
-            The physical body is fully penetrated by an energy body – which is a
-            body of frequencies and vibrations, a bit bigger than the physical
-            body itself. Every time we get a shock, which we do not react
-            actively to, energy gets stuck and freezes in tissues and cells.
-          </P>
-          <br />
-          <P>
-            Sound is made up of vibrations and frequencies. Sound can melt old
-            frozen energy through the use of various tones, vowels and mantras
-            via the vibration resonating with the exact frequency in the tissue
-            of a blocked area. This resonance will create movement and will make
-            the energy flow.
-          </P>
-        </Box>
+      <Section delay={0.3}>
         <Box
-          textStyle="h1"
-          borderRadius="lg"
-          p={3}
-          bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+          borderRadius="20px"
+          background={useColorModeValue('#fcb03b', '#202023')}
+          boxShadow={`5px 5px 10px ${useColorModeValue(
+            '#7c561d',
+            '#0d0d0e'
+          )}, -5px -5px 10px ${useColorModeValue('#ffc980', '#333338')}`} //Can do inset for pressed
+          padding={3}
         >
-          <Text
-            color={useColorModeValue('#fcb03b', '#fcb03b')}
-            fontWeight="medium"
-            fontSize={[16, null, 18]}
-            textAlign="justify"
-            letterSpacing="tight"
-          >
-            “Sound can melt old frozen energy via the vibrations”{' '}
-          </Text>
+          <Image
+            loading="lazy"
+            src={SoundHealingImage}
+            alt="Sound Healing"
+            borderRadius="20px"
+          />
         </Box>
 
-        {/* Section 2 */}
-        <Box pb={5}>
-          <Heading as="h3" fontSize={20} my={4}>
-            The power of sound
-          </Heading>
-          <P>
-            Sound has the ability to activate parts of the subconscious brain,
-            which can give access to unconscious memories.
-          </P>
-        </Box>
-        <Box
-          textStyle="h1"
-          borderRadius="lg"
-          p={3}
-          bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
-        >
-          <Text
-            color={useColorModeValue('#fcb03b', '#fcb03b')}
-            fontWeight="medium"
-            fontSize={[16, null, 18]}
-            letterSpacing="tight"
-            textAlign="justify"
+        <Container>
+          {/* Section 1 */}
+          <Box py={5}>
+            <Title>Sound Healing</Title>
+            <Heading as="h3" fontSize={20} my={4}>
+              Sound is more than vibrations
+            </Heading>
+            <P>
+              The physical body is fully penetrated by an energy body – which is
+              a body of frequencies and vibrations, a bit bigger than the
+              physical body itself. Every time we get a shock, which we do not
+              react actively to, energy gets stuck and freezes in tissues and
+              cells.
+            </P>
+            <br />
+            <P>
+              Sound is made up of vibrations and frequencies. Sound can melt old
+              frozen energy through the use of various tones, vowels and mantras
+              via the vibration resonating with the exact frequency in the
+              tissue of a blocked area. This resonance will create movement and
+              will make the energy flow.
+            </P>
+          </Box>
+          <Box
+            textStyle="h1"
+            borderRadius="lg"
+            p={3}
+            bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
           >
-            “Sound has the ability to activate parts of the subconscious brain”{' '}
-          </Text>
-        </Box>
-      </Container>
+            <Text
+              color={useColorModeValue('#fcb03b', '#fcb03b')}
+              fontWeight="medium"
+              fontSize={[16, null, 18]}
+              textAlign="justify"
+              letterSpacing="tight"
+            >
+              “Sound can melt old frozen energy via the vibrations”{' '}
+            </Text>
+          </Box>
+
+          {/* Section 2 */}
+          <Box pb={5}>
+            <Heading as="h3" fontSize={20} my={4}>
+              The power of sound
+            </Heading>
+            <P>
+              Sound has the ability to activate parts of the subconscious brain,
+              which can give access to unconscious memories.
+            </P>
+          </Box>
+          <Box
+            textStyle="h1"
+            borderRadius="lg"
+            p={3}
+            bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+          >
+            <Text
+              color={useColorModeValue('#fcb03b', '#fcb03b')}
+              fontWeight="medium"
+              fontSize={[16, null, 18]}
+              letterSpacing="tight"
+              textAlign="justify"
+            >
+              “Sound has the ability to activate parts of the subconscious
+              brain”{' '}
+            </Text>
+          </Box>
+        </Container>
+      </Section>
     </Layout>
   )
 }
