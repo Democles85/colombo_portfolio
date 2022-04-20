@@ -36,7 +36,7 @@ const Home = () => (
 
     <Section delay={0.5}>
       <Box
-        borderRadius="20px"
+        borderRadius="10px"
         background={useColorModeValue('#fcb03b', '#202023')}
         boxShadow={`5px 5px 10px ${useColorModeValue(
           '#7c561d',
@@ -48,7 +48,7 @@ const Home = () => (
           loading="lazy"
           src="/images/works/home_thumbnail.jpg"
           alt="De Armouring"
-          borderRadius="20px"
+          borderRadius={['8px', '5px']}
         />
       </Box>
       <Box align="center" my={4}>

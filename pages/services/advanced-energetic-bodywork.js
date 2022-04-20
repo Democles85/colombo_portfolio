@@ -28,7 +28,7 @@ const AdvancedEnergeticBodywork = () => {
             loading="lazy"
             src={advancedEnergeticBodyworkImage}
             alt="Advanced Energetic Bodywork"
-            borderRadius="10px"
+            borderRadius={['8px', '5px']}
           />
         </Box>
         <Container>

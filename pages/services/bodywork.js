@@ -54,7 +54,7 @@ const Bodywork = () => {
             loading="lazy"
             src={BodyworkImage}
             alt="Bodywork"
-            borderRadius="10px"
+            borderRadius={['8px', '5px']}
           />
         </Box>
 

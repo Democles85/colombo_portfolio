@@ -29,7 +29,7 @@ const AuthenticTantra = () => {
             loading="lazy"
             src={AuthenticTantraImage}
             alt="Authentic Tantra"
-            borderRadius="10px"
+            borderRadius={['8px', '5px']}
           />
         </Box>
         <Container>
