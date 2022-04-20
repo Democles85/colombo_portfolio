@@ -64,7 +64,7 @@ const SoundHealing = () => {
           {/* Section 1 */}
           <Box py={5}>
             <Title>Sound Healing</Title>
-            <Heading as="h3" fontSize={20} my={4}>
+            <Heading as="h3" fontSize={20} my={4} variant="service-title">
               Sound is more than vibrations
             </Heading>
             <P>
@@ -102,7 +102,7 @@ const SoundHealing = () => {
 
           {/* Section 2 */}
           <Box pb={5}>
-            <Heading as="h3" fontSize={20} my={4}>
+            <Heading as="h3" fontSize={20} my={4} variant="service-title">
               The power of sound
             </Heading>
             <P>

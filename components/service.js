@@ -1,5 +1,12 @@
 import NextLink from 'next/link'
-import { Heading, Box, Image, Link, Badge } from '@chakra-ui/react'
+import {
+  Heading,
+  Box,
+  Image,
+  Link,
+  Badge,
+  useColorModeValue
+} from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 
 export const Title = ({ children }) => (
@@ -11,7 +18,13 @@ export const Title = ({ children }) => (
       {' '}
       <ChevronRightIcon />{' '}
     </span>
-    <Heading display="inline-block" as="h3" fontSize={20} mb={4}>
+    <Heading
+      display="inline-block"
+      as="h3"
+      fontSize={20}
+      mb={4}
+      color={useColorModeValue('#202020', '#fcb03b')}
+    >
       {children}
     </Heading>
   </Box>

@@ -61,7 +61,7 @@ const Bodywork = () => {
         <Container>
           <Box py={5}>
             <Title>Bodywork</Title>
-            <Heading as="h3" my={4} fontSize={20}>
+            <Heading as="h3" my={4} fontSize={20} variant="service-title">
               A brief explanation of how de-armouring came to life.
             </Heading>
             <P>

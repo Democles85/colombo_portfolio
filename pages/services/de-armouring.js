@@ -61,7 +61,7 @@ const DeArmouring = () => {
         <Container>
           <Box py={5}>
             <Title>De-Armouring</Title>
-            <Heading as="h3" my={4} fontSize={20}>
+            <Heading as="h3" my={4} fontSize={20} variant="service-title">
               What does De-Armouring accomplish?
             </Heading>
             <P>

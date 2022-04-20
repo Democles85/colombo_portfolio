@@ -35,7 +35,7 @@ const AuthenticTantra = () => {
         <Container>
           <Box py={5}>
             <Title>Authentic Tantra</Title>
-            <Heading as="h3" my={4} fontSize={20}>
+            <Heading as="h3" my={4} fontSize={20} variant="service-title">
               What is authentic tantra?
             </Heading>
             <P>
