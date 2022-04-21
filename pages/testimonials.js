@@ -8,7 +8,7 @@ import {
   useColorModeValue,
   WrapItem
 } from '@chakra-ui/react'
-import P from '../components/paragraph'
+import P from '../components/testimonial_paragraph'
 import React from 'react'
 import Layout from '../components/layouts/article'
 import data from '../utils/data'
@@ -71,7 +71,6 @@ const Testimonials = () => {
                 px={[5, 15, 50]}
               >
                 <P>{content.text}</P>
-                <br />
               </GridItem>
             ))}
             {/* <GridItem
