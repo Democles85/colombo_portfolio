@@ -54,7 +54,7 @@ const About = () => {
                 maxWidth="100px"
                 display="inline-block"
                 borderRadius="full"
-                src="/images/colombo.png"
+                src="/images/colombo_auto_x2.png"
                 alt="Profile Image"
               />
             </Box>

@@ -120,7 +120,7 @@ const data = {
           text: 'Colombo is a passionate therapist with a pleasant personality. A man who loves Energy so much and his goal is to support in the best ways our energetic expansion! "We are basically what we are." Thank you with all my heart for this great gift!'
         }
       ],
-      image: '/images/testimonials/default_avatar.jpeg',
+      image: '/images/testimonials/default_avatar.png',
       country: 'Albania'
     },
     {
