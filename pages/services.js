@@ -1,4 +1,10 @@
-import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
+import {
+  Container,
+  Heading,
+  SimpleGrid,
+  Divider,
+  useColorModeValue
+} from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
@@ -14,12 +20,18 @@ const Services = () => (
   <Layout title="Services">
     <Container>
       {/* Bodywork / Section 1 */}
-      <Heading as="h3" fontSize={20} mb={4}>
-        Bodywork
-      </Heading>
 
-      <SimpleGrid columns={[1, 1, 2]} gap={6}>
+      <SimpleGrid columns={[1, 1, 1]}>
         <Section>
+          <Heading
+            as="h3"
+            fontSize={20}
+            mb={4}
+            color={useColorModeValue('#202023', '#fcb03b')}
+          >
+            Bodywork
+          </Heading>
+
           <WorkGridItem
             id="bodywork"
             title="Bodywork"
@@ -29,14 +41,37 @@ const Services = () => (
             practices involving hands-on manipulation of the body...
           </WorkGridItem>
         </Section>
-        <Section>
+        <Divider my={6} />
+
+        <Section delay={0.2}>
+          <Heading
+            as="h3"
+            fontSize={20}
+            mb={4}
+            color={useColorModeValue('#202023', '#fcb03b')}
+          >
+            Sound Healing
+          </Heading>
           <WorkGridItem
-            id="authentic-tantra"
-            title="Authentic Tantra"
-            thumbnail={thumbAuthenticTantra}
-          ></WorkGridItem>
+            id="sound-healing"
+            title="Sound Healing"
+            thumbnail={thumbSoundHealing}
+          >
+            Sound has the ability to activate parts of the subconscious brain,
+            which can give access to unconscious memories...
+          </WorkGridItem>
         </Section>
-        <Section>
+        <Divider my={6} />
+
+        <Section delay={0.4}>
+          <Heading
+            as="h3"
+            fontSize={20}
+            mb={4}
+            color={useColorModeValue('#202023', '#fcb03b')}
+          >
+            De Armouring
+          </Heading>
           <WorkGridItem
             id="de-armouring"
             title="De Armouring"
@@ -46,44 +81,42 @@ const Services = () => (
             tension from the body...
           </WorkGridItem>
         </Section>
+        <Divider my={6} />
+
+        <Section delay={0.6}>
+          <Heading
+            as="h3"
+            fontSize={20}
+            mb={4}
+            color={useColorModeValue('#202023', '#fcb03b')}
+          >
+            Authentic Tantra
+          </Heading>
+          <WorkGridItem
+            id="authentic-tantra"
+            title="Authentic Tantra"
+            thumbnail={thumbAuthenticTantra}
+          ></WorkGridItem>
+        </Section>
+        <Divider my={6} />
+
+        <Section delay={0.8}>
+          <Heading
+            as="h3"
+            fontSize={20}
+            mb={4}
+            color={useColorModeValue('#202023', '#fcb03b')}
+          >
+            Advanced Energetic Bodywork
+          </Heading>
+          <WorkGridItem
+            id="advanced-energetic-bodywork"
+            title="Advanced Energetic Bodywork"
+            thumbnail={thumbAdvancedEnergeticBodywork}
+          ></WorkGridItem>
+        </Section>
       </SimpleGrid>
 
-      <Section delay={0.4}>
-        <Divider my={6} />
-
-        <Heading as="h3" fontSize={20} mb={4}>
-          Sound Healing
-        </Heading>
-        <SimpleGrid columns={[1, 1, 2]} gap={6}>
-          <Section>
-            <WorkGridItem
-              id="sound-healing"
-              title="Sound Healing"
-              thumbnail={thumbSoundHealing}
-            >
-              Sound has the ability to activate parts of the subconscious brain,
-              which can give access to unconscious memories...
-            </WorkGridItem>
-          </Section>
-        </SimpleGrid>
-      </Section>
-
-      <Section delay={0.6}>
-        <Divider my={6} />
-
-        <Heading as="h3" fontSize={20} mb={4}>
-          Advanced Energetic Bodywork
-        </Heading>
-        <SimpleGrid columns={[1, 1, 2]} gap={6}>
-          <Section>
-            <WorkGridItem
-              id="advanced-energetic-bodywork"
-              title="Advanced Energetic Bodywork"
-              thumbnail={thumbAdvancedEnergeticBodywork}
-            ></WorkGridItem>
-          </Section>
-        </SimpleGrid>
-      </Section>
       {/* Works | Section 2 */}
       {/* <Heading as="h3" fontSize={20} mb={4}>
         Sound Healing

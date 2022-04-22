@@ -21,7 +21,10 @@ const DeArmouring = () => {
           textStyle="h1"
           borderRadius="lg"
           p={5}
-          bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+          // bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+          background="rgba(245,166,35,0.25)"
+          boxShadow="0 8px 32px 0 rgba(245,166,35, 0.15)"
+          border="1px solid rgba(255,255,255, 0.18)"
         >
           <Text
             color={useColorModeValue('#202020', '#eeeeee')}

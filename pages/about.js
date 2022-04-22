@@ -36,7 +36,11 @@ const About = () => {
         <Container>
           <Box display={{ md: 'flex' }} py={5}>
             <Box flexGrow={1}>
-              <Heading as="h2" variant="page-title">
+              <Heading
+                as="h2"
+                variant="page-title"
+                color={useColorModeValue('#202023', '#fcb03b')}
+              >
                 Hello
               </Heading>
               <p>I&apos;m Colombo</p>
@@ -54,45 +58,53 @@ const About = () => {
                 maxWidth="100px"
                 display="inline-block"
                 borderRadius="full"
-                src="/images/colombo_auto_x2.png"
+                src="/images/colombo.png"
                 alt="Profile Image"
               />
             </Box>
           </Box>
           <Section delay={0.2}>
             <Box py={5}>
-              <Heading as="h3" variant="section-title">
-                My life long passions are
+              <Heading
+                as="h3"
+                variant="section-title"
+                color={useColorModeValue('#202023', '#fcb03b')}
+              >
+                My passion is
               </Heading>
               <Paragraph>
-                Healing through deep emotional release, understanding of the
-                Human condition, transformation and transmutation of shadow
-                aspects into light. Withing my work I focus on a direct and
-                intense experience of life as a way of bringing that
-                transformation alive.
+                The deep understanding of the human species, by softly entering
+                inside, through deep emotional release, an empathic approach
+                outside of traumas. In my job, I focus on creating a safe place
+                for transforming obscurity into light.
               </Paragraph>
             </Box>
 
             <Box py={5}>
-              <Heading as="h3" variant="section-title">
+              <Heading
+                as="h3"
+                variant="section-title"
+                color={useColorModeValue('#202023', '#fcb03b')}
+              >
                 I have
               </Heading>
               <Paragraph>
-                A lot of experience in dealing with the scars and wounds of
-                life, and am skilled in holding a deep space of Love;
-                understanding how important it is to work within a strong
-                container of love while doing transformational work.
+                Expertise in energetically observing what you have been going
+                through and very quickly finding the wounds that need healing.
               </Paragraph>
             </Box>
 
             <Box pt={5} pb={10}>
-              <Heading as="h3" variant="section-title">
+              <Heading
+                as="h3"
+                variant="section-title"
+                color={useColorModeValue('#202023', '#fcb03b')}
+              >
                 My
               </Heading>
               <Paragraph>
-                Own life is my personal laboratory of the human condition and
-                transformation, and I continuously and relentlessly work and
-                experiment on myself.
+                Personal life is my own testing laboratory for a living souls’
+                state and transformation.
               </Paragraph>
             </Box>
 
@@ -107,10 +119,9 @@ const About = () => {
                 color={useColorModeValue('#202023', '#fcb03b')}
                 fontWeight="bold"
               >
-                Within me I hold both ends of the spectrum:
+                Inside me I hold
               </Text>{' '}
-              The ability to empathize and to hold you gently while the
-              emotional storm is happening within you.
+              The ability to see through the traumas, and into your higher self
             </Box>
           </Section>
         </Container>
