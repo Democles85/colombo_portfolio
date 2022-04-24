@@ -21,7 +21,7 @@ const Main = ({ children, router }) => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@LeJhin1" />
         <meta name="twitter:creator" content="@LeJhin1" />
-        <meta name="twitter:image" content="card.png" />
+        <meta name="twitter:image" content="/card.png" />
         <meta
           property="og:site_name"
           content="Resonate With Yourself Homepage"
@@ -31,7 +31,7 @@ const Main = ({ children, router }) => {
           content="Resonate, Yourself, Resonate With Yourself, Colombo, Sixhei, Tartari, Therapy, De-Armoring, dearmoring, de, armoring, tantra, tantra dearmoring, bodywork, "
         />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="card.png" />
+        <meta property="og:image" content="/card.png" />
         <title>Resonate With Yourself - Homepage</title>
       </Head>
 
