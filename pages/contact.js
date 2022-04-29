@@ -13,6 +13,7 @@ import {
 import React, { useState } from 'react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
+import * as gtag from '../lib/gtag'
 
 const Contact = () => {
   const ContactThumbnail = '/images/works/contact_thumbnail.jpg'
@@ -96,6 +97,13 @@ const Contact = () => {
 
         return
       }
+
+      gtag.event({
+        action: 'submit_form',
+        category: 'Contact',
+        label: email
+      })
+
       setShowSuccessMessage(true)
       setShowFailureMessage(false)
       setButtonText('Send')
@@ -211,7 +219,7 @@ const Contact = () => {
               >
                 <FormLabel htmlFor="message">Message / Questions</FormLabel>
                 <Textarea
-                  placeholder="Type your message"
+                  placeHolder="Type your message"
                   isFullWidth
                   id="message"
                   value={message}
