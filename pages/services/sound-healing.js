@@ -16,7 +16,7 @@ const SoundHealing = () => {
   const SoundHealingImage = '/images/works/thumb_6.jpeg'
   return (
     <Layout title="Sound Healing">
-      <Section>
+      <Section delay={0.2}>
         <Box
           textStyle="h1"
           borderRadius="lg"

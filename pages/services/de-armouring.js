@@ -16,7 +16,7 @@ const DeArmouring = () => {
   const DeArmouringImage = '/images/works/thumb_3.jpeg'
   return (
     <Layout title="De-Armouring">
-      <Section>
+      <Section delay={0.2}>
         <Box
           textStyle="h1"
           borderRadius="lg"

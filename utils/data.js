@@ -75,7 +75,7 @@ const data = {
           text: 'In conclusion, Colombo was very professional and deep in what he did. If you want to rediscover your energy and body, trust him! I walked away thinking what did he do?!'
         }
       ],
-      image: '/images/testimonials/lisa_c.jpeg',
+      image: '/images/testimonials/default_avatar.png',
       country: 'Italy'
     },
     {

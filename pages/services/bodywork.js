@@ -16,7 +16,7 @@ const Bodywork = () => {
   const BodyworkImage = '/images/works/thumb_1.jpeg'
   return (
     <Layout title="Bodywork">
-      <Section>
+      <Section delay={0.2}>
         <Box
           textStyle="h1"
           borderRadius="lg"
@@ -43,7 +43,7 @@ const Bodywork = () => {
           </Text>
         </Box>
       </Section>
-      <Section>
+      <Section delay={0.3}>
         <Box
         // borderRadius="10px"
         // background={useColorModeValue('#fcb03b', '#202023')}

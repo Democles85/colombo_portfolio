@@ -14,7 +14,7 @@ const AdvancedEnergeticBodywork = () => {
   const advancedEnergeticBodyworkImage = '/images/works/thumb_5.jpeg'
   return (
     <Layout title="Advanced Energetic Bodywork">
-      <Section>
+      <Section delay={0.3}>
         <Box
         // borderRadius="10px"
         // background={useColorModeValue('#fcb03b', '#202023')}
