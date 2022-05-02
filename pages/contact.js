@@ -126,7 +126,7 @@ const Contact = () => {
 
   return (
     <Layout title="Contact">
-      <Section>
+      <Section delay={0.2}>
         <Box
         // borderRadius="10px"
         // background={useColorModeValue('#fcb03b', '#202023')}
@@ -144,7 +144,7 @@ const Contact = () => {
           />
         </Box>
       </Section>
-      <Section delay={0.2}>
+      <Section delay={0.4}>
         <Box>
           <Heading as="h3" variant="section-title">
             Contact Me:
@@ -311,11 +311,11 @@ const Contact = () => {
           <AspectRatio ratio={16 / 9}>
             <Box as={AspectRatio} borderRadius={'lg'}>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2553.4467340897313!2d19.497042319565203!3d40.44036399803986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1smassage%20therapist!5e0!3m2!1sen!2s!4v1651526944488!5m2!1sen!2s"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.5676191075245!2d19.497305006125178!3d40.440572210146094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134533ce11900875%3A0x31ce3c1972c2d94c!2sResonate%20With%20Yourself%20(%20Holistic%20Therapy%20%2F%20Bodywork%20%2F%20Massage%20)!5e0!3m2!1sen!2s!4v1651527787510!5m2!1sen!2s"
+                allowFullScreen
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
-                allowFullScreen
-              />
+              ></iframe>
             </Box>
           </AspectRatio>
         </Box>
