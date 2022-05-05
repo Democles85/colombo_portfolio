@@ -14,6 +14,7 @@ import {
   Link,
   List,
   ListItem,
+  Select,
   Text,
   Textarea
 } from '@chakra-ui/react'
@@ -34,6 +35,7 @@ const Contact = () => {
   const [email, setEmail] = useState('')
   const [subject, setSubject] = useState('')
   const [message, setMessage] = useState('')
+  const [gender, setGender] = useState('')
 
   const [errors, setErrors] = useState({})
 
@@ -61,6 +63,11 @@ const Contact = () => {
       isValid = false
     }
 
+    if (gender.length <= 0) {
+      tempErrors['gender'] = true
+      isValid = false
+    }
+
     if (email.length <= 0 || !email.match(emailFormat)) {
       tempErrors['email'] = true
       isValid = false
@@ -83,7 +90,8 @@ const Contact = () => {
           email: email,
           firstName: firstName,
           subject: subject,
-          message: message
+          message: message,
+          gender: gender
         }),
         headers: {
           'Content-Type': 'application/json'
@@ -102,6 +110,7 @@ const Contact = () => {
         setEmail('')
         setMessage('')
         setSubject('')
+        setGender('')
 
         return
       }
@@ -120,6 +129,7 @@ const Contact = () => {
       setEmail('')
       setMessage('')
       setSubject('')
+      setGender('')
     }
     // console.log(firstName, email, subject, message)
   }
@@ -160,7 +170,7 @@ const Contact = () => {
                   <FormLabel htmlFor="first-name">Name / Nickname</FormLabel>
                   <Input
                     id="firstName"
-                    placeHolder="Name / Nickname"
+                    placeholder="Name / Nickname"
                     value={firstName}
                     onChange={e => {
                       setFirstName(e.target.value)
@@ -191,7 +201,7 @@ const Contact = () => {
                 <FormLabel htmlFor="subject">Subject</FormLabel>
                 <Input
                   id="subject"
-                  placeHolder="Subject"
+                  placeholder="Subject"
                   value={subject}
                   onChange={e => {
                     setSubject(e.target.value)
@@ -211,7 +221,7 @@ const Contact = () => {
                 <FormLabel htmlFor="email">Email</FormLabel>
                 <Input
                   id="email"
-                  placeHolder="Email"
+                  placeholder="Email"
                   value={email}
                   onChange={e => {
                     setEmail(e.target.value)
@@ -228,9 +238,32 @@ const Contact = () => {
                 py={formBoxPaddingY}
                 px={formBoxPaddingX}
               >
+                <FormLabel htmlFor="gender">Gender</FormLabel>
+                <Select
+                  placeholder="Choose your gender"
+                  value={gender}
+                  onChange={e => {
+                    setGender(e.target.value)
+                  }}
+                >
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </Select>
+                {errors?.gender && (
+                  <FormHelperText color={'red.500'}>
+                    Please select your gender.
+                  </FormHelperText>
+                )}
+              </Box>
+              <Box
+                width={formBoxWidth}
+                py={formBoxPaddingY}
+                px={formBoxPaddingX}
+              >
                 <FormLabel htmlFor="message">Message / Questions</FormLabel>
                 <Textarea
-                  placeHolder="Type your message"
+                  placeholder="Type your message"
                   isFullWidth
                   id="message"
                   value={message}
