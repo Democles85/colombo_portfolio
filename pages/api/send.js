@@ -11,6 +11,7 @@ async function sendEmail(req, res) {
       subject: `[Lead from website] : ${req.body.subject}`,
       html: `  
         <h3>You've got a new mail from ${req.body.firstName}, their email is: ${req.body.email} </h3>
+        <h3>Gender: ${req.body.gender}</h3>
         <div style="font-size: 16px;">
         <strong>Message:</strong>
         <p>${req.body.message}</p>
