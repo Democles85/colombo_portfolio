@@ -95,7 +95,7 @@ const Contact = () => {
       if (error) {
         // console.log(error)
         setShowSuccessMessage(false)
-        setShowSuccessMessage(true)
+        setShowFailureMessage(true)
         setButtonText('Send')
 
         setFirstName('')
