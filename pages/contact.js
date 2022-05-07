@@ -73,7 +73,8 @@ const Contact = () => {
       isValid = false
     }
     setErrors({ ...tempErrors })
-    // console.log('errors', errors)
+    console.log('errors', errors)
+    console.log('valid', isValid)
     return isValid
   }
 
@@ -82,7 +83,7 @@ const Contact = () => {
 
     let isValidForm = handleValidation()
 
-    if (isValidForm) {
+    if (isValidForm === true) {
       setButtonText('Sending')
 
       const res = await fetch('/api/send', {
@@ -101,7 +102,7 @@ const Contact = () => {
 
       const { error } = await res.json()
       if (error) {
-        // console.log(error)
+        // console.log(error, isValidForm)
         setShowSuccessMessage(false)
         setShowFailureMessage(true)
         setButtonText('Send')
@@ -114,7 +115,6 @@ const Contact = () => {
 
         return
       }
-
       gtag.event({
         action: 'submit_form',
         category: 'Contact',
@@ -130,6 +130,12 @@ const Contact = () => {
       setMessage('')
       setSubject('')
       setGender('')
+    } else {
+      setShowSuccessMessage(false)
+      setShowFailureMessage(true)
+      setButtonText('Send')
+
+      return
     }
     // console.log(firstName, email, subject, message)
   }
@@ -283,7 +289,7 @@ const Contact = () => {
                 justifyContent="center"
                 py={formBoxPaddingY}
               >
-                <Button width="50%" type="submit">
+                <Button width="50%" type={'submit'}>
                   {buttonText}
                 </Button>
               </Box>
