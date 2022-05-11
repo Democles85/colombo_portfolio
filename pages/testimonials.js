@@ -25,7 +25,7 @@ const Testimonials = () => {
   )
 
   const settings = {
-    dots: true,
+    dots: false,
     accessibility: true,
     autoplay: true,
     fade: true,
