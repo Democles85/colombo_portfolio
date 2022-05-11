@@ -28,7 +28,7 @@ const Testimonials = () => {
     dots: true,
     accessibility: true,
     autoplay: true,
-    fade: false,
+    fade: true,
     pauseOnFocus: true,
     pauseOnHover: true,
     infinite: true,
