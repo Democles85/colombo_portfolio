@@ -7,6 +7,7 @@ import * as gtag from '../lib/gtag'
 import { useEffect } from 'react'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import '../pages/styles.css'
 
 function Website({ Component, pageProps, router }) {
   useEffect(() => {

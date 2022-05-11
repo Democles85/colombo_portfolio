@@ -12,11 +12,34 @@ import {
   WrapItem
 } from '@chakra-ui/react'
 import Slider from 'react-slick'
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 import P from '../components/testimonial_paragraph'
 import React from 'react'
 import Layout from '../components/layouts/article'
 import data from '../utils/data'
 import Section from '../components/section'
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props
+  return (
+    <Box
+      className={className}
+      style={{ ...style, display: 'block' }}
+      onClick={onClick}
+    />
+  )
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props
+  return (
+    <Box
+      className={className}
+      style={{ ...style, display: 'block' }}
+      onClick={onClick}
+    />
+  )
+}
 
 const Testimonials = () => {
   const colorValue = useColorModeValue(
@@ -29,15 +52,38 @@ const Testimonials = () => {
     accessibility: true,
     autoplay: true,
     fade: true,
+    pauseOnSelect: true,
     pauseOnFocus: true,
     pauseOnHover: true,
+    pauseOnDotsHover: true,
     infinite: true,
+    touchThreshold: 100,
     speed: 1000,
-    autoplaySpeed: 8000,
+    cssEase: 'ease-out',
+    autoplaySpeed: 10000,
+    useTransform: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     adaptiveHeight: true,
-    arrows: false,
+    arrows: true,
+    prevArrow: <SamplePrevArrow />,
+    nextArrow: <SampleNextArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          arrows: false
+        },
+        breakpoint: 600,
+        settings: {
+          arrows: false
+        },
+        breakpoint: 480,
+        settings: {
+          arrows: false
+        }
+      }
+    ],
     appendDots: dots => (
       <Box display="flex" justifyContent="center">
         <Box
