@@ -16,7 +16,8 @@ import {
   ListItem,
   Select,
   Text,
-  Textarea
+  Textarea,
+  useColorModeValue
 } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import Layout from '../components/layouts/article'
@@ -25,6 +26,21 @@ import Section from '../components/section'
 import * as gtag from '../lib/gtag'
 
 const Contact = () => {
+  const colorValue09 = useColorModeValue(
+    'rgba(32 ,32 ,32, 0.9)',
+    'rgba(255, 255, 255, 0.9)'
+  )
+
+  const colorValue06 = useColorModeValue(
+    'rgba(32,32,32, 0.60)',
+    'rgba(255,255,255, 0.60)'
+  )
+
+  const colorValue04 = useColorModeValue(
+    'rgba(32, 32, 32, 0.40)',
+    'rgba(255, 255, 255, 0.40)'
+  )
+
   const ContactThumbnail = '/images/works/contact_thumbnail.jpg'
   const formBoxPaddingY = 2.5
   const formBoxPaddingX = 25
@@ -42,6 +58,7 @@ const Contact = () => {
   const [buttonText, setButtonText] = useState('Send')
 
   const [showSuccessMessage, setShowSuccessMessage] = useState(false)
+  const [showFillAllMessage, setShowFillAllMessage] = useState(false)
   const [showFailureMessage, setShowFailureMessage] = useState(false)
 
   const handleValidation = () => {
@@ -73,8 +90,8 @@ const Contact = () => {
       isValid = false
     }
     setErrors({ ...tempErrors })
-    console.log('errors', errors)
-    console.log('valid', isValid)
+    // console.log('errors', errors)
+    // console.log('valid', isValid)
     return isValid
   }
 
@@ -104,6 +121,7 @@ const Contact = () => {
       if (error) {
         // console.log(error, isValidForm)
         setShowSuccessMessage(false)
+        setShowFillAllMessage(false)
         setShowFailureMessage(true)
         setButtonText('Send')
 
@@ -122,6 +140,7 @@ const Contact = () => {
       })
 
       setShowSuccessMessage(true)
+      setShowFillAllMessage(false)
       setShowFailureMessage(false)
       setButtonText('Send')
 
@@ -132,7 +151,8 @@ const Contact = () => {
       setGender('')
     } else {
       setShowSuccessMessage(false)
-      setShowFailureMessage(true)
+      setShowFailureMessage(false)
+      setShowFillAllMessage(true)
       setButtonText('Send')
 
       return
@@ -175,8 +195,16 @@ const Contact = () => {
                 >
                   <FormLabel htmlFor="first-name">Name / Nickname</FormLabel>
                   <Input
+                    borderColor={colorValue06}
+                    _placeholder={{
+                      color: colorValue04
+                    }}
+                    _hover={{
+                      borderColor: colorValue09
+                    }}
+                    focusBorderColor={useColorModeValue('#fcb03b', '#fcb03b')}
                     id="firstName"
-                    placeholder="Name / Nickname"
+                    placeholder="Your Name"
                     value={firstName}
                     onChange={e => {
                       setFirstName(e.target.value)
@@ -188,16 +216,6 @@ const Contact = () => {
                     </FormHelperText>
                   )}
                 </Box>
-
-                {/* <Box
-                width={formBoxWidth}
-                py={formBoxPaddingY}
-                px={formBoxPaddingX}
-              >
-                <FormLabel htmlFor="last-name">Last Name</FormLabel>
-                <Input id="last-name" placeHolder="Last Name" />
-                <FormHelperText>Last Name is not required</FormHelperText>
-              </Box> */}
               </Box>
               <Box
                 width={formBoxWidth}
@@ -206,6 +224,14 @@ const Contact = () => {
               >
                 <FormLabel htmlFor="subject">Subject</FormLabel>
                 <Input
+                  borderColor={colorValue06}
+                  _placeholder={{
+                    color: colorValue04
+                  }}
+                  _hover={{
+                    borderColor: colorValue09
+                  }}
+                  focusBorderColor={useColorModeValue('#fcb03b', '#fcb03b')}
                   id="subject"
                   placeholder="Subject"
                   value={subject}
@@ -226,6 +252,14 @@ const Contact = () => {
               >
                 <FormLabel htmlFor="email">Email</FormLabel>
                 <Input
+                  borderColor={colorValue06}
+                  _placeholder={{
+                    color: colorValue04
+                  }}
+                  _hover={{
+                    borderColor: colorValue09
+                  }}
+                  focusBorderColor={useColorModeValue('#fcb03b', '#fcb03b')}
                   id="email"
                   placeholder="Email"
                   value={email}
@@ -246,15 +280,54 @@ const Contact = () => {
               >
                 <FormLabel htmlFor="gender">Gender</FormLabel>
                 <Select
-                  placeholder="Choose your gender"
+                  borderColor={colorValue06}
+                  _hover={{
+                    borderColor: colorValue09
+                  }}
+                  focusBorderColor={useColorModeValue('#fcb03b', '#fcb03b')}
                   value={gender}
                   onChange={e => {
                     setGender(e.target.value)
                   }}
                 >
-                  <option value="Male">Male</option>
-                  <option value="Female">Female</option>
-                  <option value="Other">Other</option>
+                  <option
+                    style={{
+                      color: colorValue04
+                    }}
+                    selected
+                    hidden
+                    disabled
+                    value=""
+                  >
+                    Choose your gender
+                  </option>
+                  <option
+                    style={{
+                      color: colorValue09,
+                      background: useColorModeValue('#fff', '#202023')
+                    }}
+                    value="Male"
+                  >
+                    Male
+                  </option>
+                  <option
+                    style={{
+                      color: colorValue09,
+                      background: useColorModeValue('#fff', '#202023')
+                    }}
+                    value="Female"
+                  >
+                    Female
+                  </option>
+                  <option
+                    style={{
+                      color: colorValue09,
+                      background: useColorModeValue('#fff', '#202023')
+                    }}
+                    value="Other"
+                  >
+                    Other
+                  </option>
                 </Select>
                 {errors?.gender && (
                   <FormHelperText color={'red.500'}>
@@ -269,8 +342,15 @@ const Contact = () => {
               >
                 <FormLabel htmlFor="message">Message / Questions</FormLabel>
                 <Textarea
+                  borderColor={colorValue06}
+                  _placeholder={{
+                    color: colorValue04
+                  }}
+                  _hover={{
+                    borderColor: colorValue09
+                  }}
+                  focusBorderColor={useColorModeValue('#fcb03b', '#fcb03b')}
                   placeholder="Type your message"
-                  isFullWidth
                   id="message"
                   value={message}
                   onChange={e => {
@@ -289,7 +369,14 @@ const Contact = () => {
                 justifyContent="center"
                 py={formBoxPaddingY}
               >
-                <Button width="50%" type={'submit'}>
+                <Button
+                  width="50%"
+                  type={'submit'}
+                  bg={useColorModeValue(
+                    'rgba(255,255,255,0.9)',
+                    'rgba(255,255,255, 0.2)'
+                  )}
+                >
                   {buttonText}
                 </Button>
               </Box>
@@ -299,16 +386,24 @@ const Contact = () => {
                 px={formBoxPaddingX}
               >
                 {showSuccessMessage && (
-                  <Section delay={0.5}>
-                    <Alert status="success" variant="solid" borderRadius="5px">
+                  <Section delay={0.2}>
+                    <Alert status="success" variant="solid" borderRadius="lg">
                       <AlertIcon />
                       Your message was sent. Thank you!
                     </Alert>
                   </Section>
                 )}
+                {showFillAllMessage && (
+                  <Section delay={0.2}>
+                    <Alert status="warning" variant="solid" borderRadius="lg">
+                      <AlertIcon />
+                      Please fill in all the required fields.
+                    </Alert>
+                  </Section>
+                )}
                 {showFailureMessage && (
-                  <Section delay={0.5}>
-                    <Alert status="error" variant="solid" borderRadius="5px">
+                  <Section delay={0.2}>
+                    <Alert status="error" variant="solid" borderRadius="lg">
                       <AlertIcon />
                       Oops! Something went wrong, please try again.
                     </Alert>
@@ -353,7 +448,7 @@ const Contact = () => {
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.5676191075245!2d19.497305006125178!3d40.440572210146094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134533ce11900875%3A0x31ce3c1972c2d94c!2sResonate%20With%20Yourself%20(%20Holistic%20Therapy%20%2F%20Bodywork%20%2F%20Massage%20)!5e0!3m2!1sen!2s!4v1651527787510!5m2!1sen!2s"
                 allowFullScreen
                 loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
+                referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </Box>
           </AspectRatio>

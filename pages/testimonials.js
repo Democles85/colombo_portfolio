@@ -2,8 +2,10 @@ import {
   Avatar,
   Box,
   Container,
+  Divider,
   Grid,
   GridItem,
+  Heading,
   Image,
   List,
   SimpleGrid,
@@ -43,7 +45,7 @@ function SamplePrevArrow(props) {
 
 const Testimonials = () => {
   const colorValue = useColorModeValue(
-    'rgba(255,255,255, 0.8)',
+    'rgba(32,32,32, 0.18)',
     'rgba(255,255,255, 0.18)'
   )
 
@@ -51,7 +53,7 @@ const Testimonials = () => {
     dots: false,
     accessibility: true,
     autoplay: true,
-    fade: true,
+    fade: false,
     pauseOnSelect: true,
     pauseOnFocus: true,
     pauseOnHover: true,
@@ -122,10 +124,10 @@ const Testimonials = () => {
               <Grid
                 key={testimonies.title}
                 textAlign="center"
-                background="rgba(245,166,35,0.25)"
+                // background="rgba(245,166,35,0.25)"
                 // boxShadow="0 8px 32px 0 rgba(245,166,35, 0.15)"
                 borderRadius="lg"
-                border="1px solid rgba(255,255,255, 0.18)"
+                border={['none', `1px solid ${colorValue}`]}
                 py={5}
                 maxWidth="560px"
               >
