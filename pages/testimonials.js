@@ -59,7 +59,7 @@ const Testimonials = () => {
     pauseOnHover: true,
     pauseOnDotsHover: true,
     infinite: true,
-    touchThreshold: 100,
+    touchThreshold: 10,
     speed: 1000,
     cssEase: 'ease-out',
     autoplaySpeed: 10000,
