@@ -50,7 +50,7 @@ const Testimonials = () => {
   )
 
   const settings = {
-    dots: false,
+    dots: true,
     accessibility: true,
     autoplay: true,
     fade: false,
@@ -74,14 +74,17 @@ const Testimonials = () => {
       {
         breakpoint: 1024,
         settings: {
+          fade: true,
           arrows: false
         },
         breakpoint: 600,
         settings: {
+          fade: true,
           arrows: false
         },
         breakpoint: 480,
         settings: {
+          fade: true,
           arrows: false
         }
       }
@@ -90,19 +93,13 @@ const Testimonials = () => {
       <Box display="flex" justifyContent="center">
         <Box
           position={'relative'}
-          bottom={0}
+          bottom={-5}
           py={2}
-          background="rgba(154,107,30,0.65)"
-          border="1px solid rgba(255,255,255, 0.18)"
           borderRadius={'lg'}
+          color="white"
         >
           <ul>{dots}</ul>
         </Box>
-      </Box>
-    ),
-    customPaging: i => (
-      <Box color={'white'} fontWeight={'bold'}>
-        {i + 1}
       </Box>
     )
   }
@@ -124,9 +121,9 @@ const Testimonials = () => {
               <Grid
                 key={testimonies.title}
                 textAlign="center"
-                // background="rgba(245,166,35,0.25)"
+                background="rgba(245,166,35,0.25)"
                 // boxShadow="0 8px 32px 0 rgba(245,166,35, 0.15)"
-                borderRadius="lg"
+                borderRadius={'lg'}
                 border={['none', `1px solid ${colorValue}`]}
                 py={5}
                 maxWidth="560px"

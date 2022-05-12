@@ -3,3 +3,11 @@
   font-size: 30px !important;
   color: #fcb03b;
 }
+
+.slick-dots li button:before {
+  color: white !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #fcb03b !important;
+}
