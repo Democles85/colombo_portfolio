@@ -14,18 +14,40 @@ import {
   Link,
   List,
   ListItem,
+  RequiredIndicator,
   Select,
   Text,
   Textarea,
-  useColorModeValue
+  useColorModeValue,
+  chakra,
+  useStyles
 } from '@chakra-ui/react'
+import { cx } from '@chakra-ui/utils'
 import React, { useState } from 'react'
 import Layout from '../components/layouts/article'
 import { MdMail } from 'react-icons/md'
 import Section from '../components/section'
 import * as gtag from '../lib/gtag'
 
+export function ColRequiredIndicator() {
+  const styles = useStyles()
+  const className = cx('chakra-form__required-indicator')
+
+  return (
+    <chakra.span
+      // eslint-disable-next-line react/no-children-prop
+      children="*"
+      className={className}
+      aria-hidden="true"
+      __css={styles.requiredIndicator}
+      role="presentation"
+    />
+  )
+}
+
 const Contact = () => {
+  const errorColor = useColorModeValue('#e53e3e', '#fc8181')
+
   const colorValue09 = useColorModeValue(
     'rgba(32 ,32 ,32, 0.9)',
     'rgba(255, 255, 255, 0.9)'
@@ -193,8 +215,11 @@ const Contact = () => {
                   py={formBoxPaddingY}
                   px={formBoxPaddingX}
                 >
-                  <FormLabel htmlFor="first-name">Name / Nickname</FormLabel>
+                  <FormLabel htmlFor="first-name">
+                    Name / Nickname <ColRequiredIndicator />
+                  </FormLabel>
                   <Input
+                    isInvalid={errors['firstName']}
                     borderColor={colorValue06}
                     _placeholder={{
                       color: colorValue04
@@ -211,7 +236,7 @@ const Contact = () => {
                     }}
                   />
                   {errors?.firstName && (
-                    <FormHelperText color={'red.500'}>
+                    <FormHelperText color={errorColor}>
                       Please provide a name or a nickname.
                     </FormHelperText>
                   )}
@@ -222,8 +247,11 @@ const Contact = () => {
                 py={formBoxPaddingY}
                 px={formBoxPaddingX}
               >
-                <FormLabel htmlFor="subject">Subject</FormLabel>
+                <FormLabel htmlFor="subject">
+                  Subject <ColRequiredIndicator />
+                </FormLabel>
                 <Input
+                  isInvalid={errors['subject']}
                   borderColor={colorValue06}
                   _placeholder={{
                     color: colorValue04
@@ -240,7 +268,7 @@ const Contact = () => {
                   }}
                 />
                 {errors?.subject && (
-                  <FormHelperText color={'red.500'}>
+                  <FormHelperText color={errorColor}>
                     Please provide a subject.
                   </FormHelperText>
                 )}
@@ -250,8 +278,11 @@ const Contact = () => {
                 py={formBoxPaddingY}
                 px={formBoxPaddingX}
               >
-                <FormLabel htmlFor="email">Email</FormLabel>
+                <FormLabel htmlFor="email">
+                  Email <ColRequiredIndicator />
+                </FormLabel>
                 <Input
+                  isInvalid={errors['email']}
                   borderColor={colorValue06}
                   _placeholder={{
                     color: colorValue04
@@ -268,7 +299,7 @@ const Contact = () => {
                   }}
                 />
                 {errors?.email && (
-                  <FormHelperText color={'red.500'}>
+                  <FormHelperText color={errorColor}>
                     Please provide an email address.
                   </FormHelperText>
                 )}
@@ -278,8 +309,11 @@ const Contact = () => {
                 py={formBoxPaddingY}
                 px={formBoxPaddingX}
               >
-                <FormLabel htmlFor="gender">Gender</FormLabel>
+                <FormLabel htmlFor="gender">
+                  Gender <ColRequiredIndicator />
+                </FormLabel>
                 <Select
+                  isInvalid={errors['gender']}
                   borderColor={colorValue06}
                   _hover={{
                     borderColor: colorValue09
@@ -290,15 +324,7 @@ const Contact = () => {
                     setGender(e.target.value)
                   }}
                 >
-                  <option
-                    style={{
-                      color: colorValue04
-                    }}
-                    selected
-                    hidden
-                    disabled
-                    value=""
-                  >
+                  <option selected hidden disabled value="">
                     Choose your gender
                   </option>
                   <option
@@ -330,7 +356,7 @@ const Contact = () => {
                   </option>
                 </Select>
                 {errors?.gender && (
-                  <FormHelperText color={'red.500'}>
+                  <FormHelperText color={errorColor}>
                     Please select your gender.
                   </FormHelperText>
                 )}
@@ -340,8 +366,11 @@ const Contact = () => {
                 py={formBoxPaddingY}
                 px={formBoxPaddingX}
               >
-                <FormLabel htmlFor="message">Message / Questions</FormLabel>
+                <FormLabel htmlFor="message">
+                  Message / Questions <ColRequiredIndicator />
+                </FormLabel>
                 <Textarea
+                  isInvalid={errors['message']}
                   borderColor={colorValue06}
                   _placeholder={{
                     color: colorValue04
@@ -358,7 +387,7 @@ const Contact = () => {
                   }}
                 />
                 {errors?.message && (
-                  <FormHelperText color={'red.500'}>
+                  <FormHelperText color={errorColor}>
                     Please leave us a message so that we get back to you.
                   </FormHelperText>
                 )}
