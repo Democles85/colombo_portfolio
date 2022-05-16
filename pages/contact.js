@@ -28,6 +28,7 @@ import Layout from '../components/layouts/article'
 import { MdMail } from 'react-icons/md'
 import Section from '../components/section'
 import * as gtag from '../lib/gtag'
+import { AnimatePresence, motion } from 'framer-motion'
 
 export function ColRequiredIndicator() {
   const styles = useStyles()
@@ -145,6 +146,11 @@ const Contact = () => {
         setShowSuccessMessage(false)
         setShowFillAllMessage(false)
         setShowFailureMessage(true)
+
+        setTimeout(() => {
+          setShowFailureMessage(false)
+        }, 5000)
+
         setButtonText('Send')
 
         setFirstName('')
@@ -162,6 +168,11 @@ const Contact = () => {
       })
 
       setShowSuccessMessage(true)
+
+      setTimeout(() => {
+        setShowSuccessMessage(false)
+      }, 5000)
+
       setShowFillAllMessage(false)
       setShowFailureMessage(false)
       setButtonText('Send')
@@ -171,10 +182,17 @@ const Contact = () => {
       setMessage('')
       setSubject('')
       setGender('')
+
+      return
     } else {
       setShowSuccessMessage(false)
       setShowFailureMessage(false)
       setShowFillAllMessage(true)
+
+      setTimeout(() => {
+        setShowFillAllMessage(false)
+      }, 3000)
+
       setButtonText('Send')
 
       return
@@ -414,30 +432,51 @@ const Contact = () => {
                 my={formBoxPaddingY}
                 px={formBoxPaddingX}
               >
-                {showSuccessMessage && (
-                  <Section delay={0.2}>
-                    <Alert status="success" variant="solid" borderRadius="lg">
-                      <AlertIcon />
-                      Your message was sent. Thank you!
-                    </Alert>
-                  </Section>
-                )}
-                {showFillAllMessage && (
-                  <Section delay={0.2}>
-                    <Alert status="warning" variant="solid" borderRadius="lg">
-                      <AlertIcon />
-                      Please fill in all the required fields.
-                    </Alert>
-                  </Section>
-                )}
-                {showFailureMessage && (
-                  <Section delay={0.2}>
-                    <Alert status="error" variant="solid" borderRadius="lg">
-                      <AlertIcon />
-                      Oops! Something went wrong, please try again.
-                    </Alert>
-                  </Section>
-                )}
+                <AnimatePresence>
+                  {showSuccessMessage && (
+                    <motion.div
+                      initital={{ y: 10, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      exit={{ y: 10, opacity: 0 }}
+                      transition={'all 0.3s ease-in-out'}
+                    >
+                      <Alert status="success" variant="solid" borderRadius="lg">
+                        <AlertIcon />
+                        Your message was sent. Thank you!
+                      </Alert>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+                <AnimatePresence>
+                  {showFillAllMessage && (
+                    <motion.div
+                      initial={{ y: 10, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      exit={{ y: 10, opacity: 0 }}
+                      transition={'all 0.3s ease-in-out'}
+                    >
+                      <Alert status="warning" variant="solid" borderRadius="lg">
+                        <AlertIcon />
+                        Please fill in all the required fields.
+                      </Alert>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+                <AnimatePresence>
+                  {showFailureMessage && (
+                    <motion.div
+                      initial={{ y: 10, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      exit={{ y: 10, opacity: 0 }}
+                      transition={'all 0.3s ease-in-out'}
+                    >
+                      <Alert status="error" variant="solid" borderRadius="lg">
+                        <AlertIcon />
+                        Oops! Something went wrong, please try again.
+                      </Alert>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </Box>
             </FormControl>
           </form>

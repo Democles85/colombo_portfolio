@@ -50,26 +50,6 @@ const Services = () => (
             mb={4}
             color={useColorModeValue('#202023', '#fcb03b')}
           >
-            Sound Healing
-          </Heading>
-          <WorkGridItem
-            id="sound-healing"
-            title="Sound Healing"
-            thumbnail={thumbSoundHealing}
-          >
-            Sound has the ability to activate parts of the subconscious brain,
-            which can give access to unconscious memories...
-          </WorkGridItem>
-        </Section>
-        <Divider my={6} />
-
-        <Section delay={0.4}>
-          <Heading
-            as="h3"
-            fontSize={20}
-            mb={4}
-            color={useColorModeValue('#202023', '#fcb03b')}
-          >
             De Armouring
           </Heading>
           <WorkGridItem
@@ -83,7 +63,7 @@ const Services = () => (
         </Section>
         <Divider my={6} />
 
-        <Section delay={0.6}>
+        <Section delay={0.4}>
           <Heading
             as="h3"
             fontSize={20}
@@ -97,6 +77,26 @@ const Services = () => (
             title="Authentic Tantra"
             thumbnail={thumbAuthenticTantra}
           ></WorkGridItem>
+        </Section>
+        <Divider my={6} />
+
+        <Section delay={0.6}>
+          <Heading
+            as="h3"
+            fontSize={20}
+            mb={4}
+            color={useColorModeValue('#202023', '#fcb03b')}
+          >
+            Sound Healing
+          </Heading>
+          <WorkGridItem
+            id="sound-healing"
+            title="Sound Healing"
+            thumbnail={thumbSoundHealing}
+          >
+            Sound has the ability to activate parts of the subconscious brain,
+            which can give access to unconscious memories...
+          </WorkGridItem>
         </Section>
         <Divider my={6} />
 
