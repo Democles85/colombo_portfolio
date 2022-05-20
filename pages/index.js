@@ -11,7 +11,8 @@ const Home = () => (
         textStyle="h1"
         borderRadius="lg"
         p={5}
-        bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+        background="rgba(245,166,35,0.25)"
+        boxShadow="0 8px 32px 0 rgba(245,166,35, 0.15)"
       >
         <Text
           color={useColorModeValue('#202020', '#eeeeee')}
@@ -22,7 +23,7 @@ const Home = () => (
           “Do not try to find your home by seeking light, all darkness inside
           and outside the Universe is part of it.”{' '}
           <Text
-            color={useColorModeValue('#fcb03b', '#fcb03b')}
+            color={useColorModeValue('#202023', '#fff')}
             fontSize="lg"
             fontFamily="M PLUS Rounded 1c, sans-serif"
             fontWeight="light"
@@ -41,6 +42,7 @@ const Home = () => (
           src="/images/works/home_thumbnail.jpg"
           alt="De Armouring"
           borderRadius={['8px', '5px']}
+          // boxShadow="0px 0px 25px 25px rgba(0, 0, 0, 0.25)"
         />
       </Box>
       <Box align="center" my={4}>
