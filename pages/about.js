@@ -45,12 +45,7 @@ const About = () => {
               </Heading>
               <p>I&apos;m Colombo</p>
             </Box>
-            <Box
-              flexShrink={0}
-              mt={{ base: 4, md: 0 }}
-              ml={{ md: 6 }}
-              textAlign="center"
-            >
+            <Box flexShrink={0} mt={{ base: 4, md: 0 }} ml={{ md: 6 }}>
               <Image
                 borderColor="whiteAlpha.800"
                 borderWidth={2}

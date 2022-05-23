@@ -189,20 +189,27 @@ const Navbar = props => {
 
                     <Accordion allowToggle border="transparent" width="100%">
                       <AccordionItem>
-                        <h2>
-                          <AccordionButton
-                            padding="0"
-                            fontWeight="500"
-                            display="flex"
-                            justifyContent="center"
-                            alignItems="center"
+                        <AccordionButton
+                          padding="0"
+                          display="flex"
+                          justifyContent="center"
+                          alignItems="center"
+                        >
+                          <Box
+                            textAlign="center"
+                            color={useColorModeValue('#718096', '#e2e8f0')}
                           >
-                            <Box textAlign="center" fontSize={fontSize}>
+                            <Text fontSize={fontSize} fontWeight="600">
                               Services
-                            </Box>
-                            <AccordionIcon />
-                          </AccordionButton>
-                        </h2>
+                            </Text>
+                          </Box>
+                          <Box>
+                            <AccordionIcon
+                              color={useColorModeValue('#718096', '#e2e8f0')}
+                            />
+                          </Box>
+                        </AccordionButton>
+
                         <AccordionPanel
                           display="flex"
                           flexDir="column"

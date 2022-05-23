@@ -336,6 +336,9 @@ const Contact = () => {
                   _hover={{
                     borderColor: colorValue09
                   }}
+                  style={{
+                    background: useColorModeValue('#f0e7db', '#202023')
+                  }}
                   focusBorderColor={useColorModeValue('#fcb03b', '#fcb03b')}
                   value={gender}
                   onChange={e => {
@@ -348,16 +351,7 @@ const Contact = () => {
                   <option
                     style={{
                       color: colorValue09,
-                      background: useColorModeValue('#fff', '#202023')
-                    }}
-                    value="Male"
-                  >
-                    Male
-                  </option>
-                  <option
-                    style={{
-                      color: colorValue09,
-                      background: useColorModeValue('#fff', '#202023')
+                      background: useColorModeValue('#f0e7db', '#202023')
                     }}
                     value="Female"
                   >
@@ -366,7 +360,16 @@ const Contact = () => {
                   <option
                     style={{
                       color: colorValue09,
-                      background: useColorModeValue('#fff', '#202023')
+                      background: useColorModeValue('#f0e7db', '#202023')
+                    }}
+                    value="Male"
+                  >
+                    Male
+                  </option>
+                  <option
+                    style={{
+                      color: colorValue09,
+                      background: useColorModeValue('#f0e7db', '#202023')
                     }}
                     value="Other"
                   >
