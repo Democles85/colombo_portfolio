@@ -15,7 +15,7 @@ import {
 } from '@chakra-ui/react'
 import Slider from 'react-slick'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
-import P from '../components/testimonial_paragraph'
+import Paragraph from '../components/testimonial_paragraph'
 import React from 'react'
 import Layout from '../components/layouts/article'
 import data from '../utils/data'
@@ -159,7 +159,7 @@ const Testimonials = () => {
                     h="100%"
                     px={[5, 15, 50]}
                   >
-                    <P>{content.text}</P>
+                    <Paragraph>{content.text}</Paragraph>
                   </GridItem>
                 ))}
               </Grid>

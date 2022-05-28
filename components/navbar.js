@@ -1,4 +1,3 @@
-import Logo from './logo'
 import NextLink from 'next/link'
 import {
   Container,
@@ -7,13 +6,7 @@ import {
   Stack,
   Heading,
   Flex,
-  Menu,
-  MenuItem,
-  MenuList,
-  MenuButton,
-  IconButton,
   useColorModeValue,
-  color,
   useDisclosure,
   Button,
   Drawer,
@@ -32,9 +25,8 @@ import {
   AccordionIcon,
   AccordionPanel
 } from '@chakra-ui/react'
-import { ChevronDownIcon, HamburgerIcon } from '@chakra-ui/icons'
+import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
-import { IoLogoGithub } from 'react-icons/io5'
 import React from 'react'
 
 const LinkItem = ({ href, path, _target, children, ...props }) => {
@@ -79,11 +71,11 @@ const Navbar = props => {
         align="center"
         justify="space-between"
       >
-        <Flex align="center" mr={5}>
+        {/* <Flex align="center" mr={5}>
           <Heading as="h1" size="lg" letterSpacing={'tighter'}>
-            {/* <Logo /> */}
+            <Logo />
           </Heading>
-        </Flex>
+        </Flex> */}
 
         <Stack
           direction={{ base: 'column', md: 'row' }}
