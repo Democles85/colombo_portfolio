@@ -149,8 +149,8 @@ const Home = () => {
                   Duality &#38; Non Duality
                 </ListItem>
               </List>
-              Those being feminine or masculine or other genders, to support all
-              the brave hearts working on their own pace.
+              feminine or masculine, to support all those brave hearts working
+              on their own beat.
             </Paragraph>
           </Box>
         </Container>
