@@ -148,9 +148,24 @@ const Home = () => {
                   />
                   Duality &#38; Non Duality
                 </ListItem>
+                <ListItem>
+                  <ListIcon
+                    as={BsFillCircleFill}
+                    color={colorValue}
+                    width={'7px'}
+                  />
+                  Feminine &#38; Masculine Polarity
+                </ListItem>
+                <ListItem>
+                  <ListIcon
+                    as={BsFillCircleFill}
+                    color={colorValue}
+                    width={'7px'}
+                  />
+                  Sound Healing
+                </ListItem>
               </List>
-              feminine or masculine, to support all those brave hearts working
-              on their own beat.
+              To support all those brave hearts working on their own beat.
             </Paragraph>
           </Box>
         </Container>
