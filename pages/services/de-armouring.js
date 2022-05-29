@@ -130,7 +130,7 @@ const DeArmouring = () => {
                     color={colorValue}
                     width={'7px'}
                   />
-                  Trauma release
+                  Trauma Release
                 </ListItem>
                 <ListItem>
                   <ListIcon
@@ -138,7 +138,7 @@ const DeArmouring = () => {
                     color={colorValue}
                     width={'7px'}
                   />
-                  Emotional release
+                  Emotional Release
                 </ListItem>
                 <ListItem>
                   <ListIcon
@@ -146,7 +146,7 @@ const DeArmouring = () => {
                     color={colorValue}
                     width={'7px'}
                   />
-                  De-armouring
+                  De-Armouring
                 </ListItem>
                 <ListItem>
                   <ListIcon
@@ -162,7 +162,7 @@ const DeArmouring = () => {
                     color={colorValue}
                     width={'7px'}
                   />
-                  Chakra cleansing
+                  Chakra Cleansing
                 </ListItem>
                 <ListItem>
                   <ListIcon
@@ -170,7 +170,7 @@ const DeArmouring = () => {
                     color={colorValue}
                     width={'7px'}
                   />
-                  Aura cleansing
+                  Aura Cleansing
                 </ListItem>
               </List>
               and other tools, to help you access and release old emotional

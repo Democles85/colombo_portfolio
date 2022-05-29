@@ -146,6 +146,22 @@ const Home = () => {
                     color={colorValue}
                     width={'7px'}
                   />
+                  Emotional Release
+                </ListItem>
+                <ListItem>
+                  <ListIcon
+                    as={BsFillCircleFill}
+                    color={colorValue}
+                    width={'7px'}
+                  />
+                  Trauma Release
+                </ListItem>
+                <ListItem>
+                  <ListIcon
+                    as={BsFillCircleFill}
+                    color={colorValue}
+                    width={'7px'}
+                  />
                   Duality &#38; Non Duality
                 </ListItem>
                 <ListItem>

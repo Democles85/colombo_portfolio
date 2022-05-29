@@ -8,7 +8,7 @@ import {
 } from '@chakra-ui/react'
 import React from 'react'
 import Layout from '../../components/layouts/article'
-import P from '../../components/paragraph'
+import Paragraph from '../../components/paragraph'
 import Section from '../../components/section'
 import { Title } from '../../components/service'
 
@@ -58,14 +58,33 @@ const AuthenticTantra = () => {
         <Container>
           <Box py={5}>
             <Title>Authentic Tantra</Title>
-            {/* <Heading as="h3" my={4} fontSize={20} variant="service-title">
+            <Heading as="h3" my={4} variant="highlight">
               What is authentic tantra?
             </Heading>
-            <P>
-              Tantra Massage is an energy form of massage first and foremost.
-              Key energy channels are purified, energy centers are activated and
-              innate energy sources are channeled in a specific way.
-            </P> */}
+            <Paragraph>
+              Tantra is a vast metaphysical system, unrelated to any religion,
+              which originated in India and Tibet many centuries ago. This very
+              scientific, comprehensive system gives the human being a gateway
+              into the structure of reality and a practical understanding of the
+              basic laws of the universe, in essence providing us the bases for
+              development as human beings. First and foremost, Tantra is a path
+              to spiritual evolution.
+            </Paragraph>
+            <Heading as="h3" my={4} variant="highlight">
+              On another aspect:
+            </Heading>
+            <Paragraph>
+              Tantrism is not a theory or a system of thought. It&apos;s a sound
+              science of the body. Of course, the practice of the physical also
+              includes a spiritual, cosmological context. Tantra is first and
+              foremost an empirical science of the body. At the same time it is
+              a consciousness teaching, it depends on the quality of
+              consciousness in every aspect. It contains practices and methods
+              by which one can get into very specific states. So it is a work
+              with the energies of the body, with the life energy. The basis is
+              a very fine, highly differentiated system that makes up the subtle
+              currents in the human body and how they can be channeled.”
+            </Paragraph>
           </Box>
         </Container>
       </Section>
