@@ -4,6 +4,7 @@ const data = {
       id: '1',
       title: 'Forever printing in my soul.',
       author: 'Marjana K.',
+      package_type: 'Advanced Authentic Tantra & Advanced Spiritual Bodywork',
       content: [
         {
           content_id: 1,
@@ -53,6 +54,8 @@ const data = {
       id: '2',
       title: 'I really thank you!',
       author: 'Lisa C.',
+      package_type:
+        'Authentic Tantra & Spiritual Bodywork & Advanced Energetic Bodywork',
       content: [
         {
           content_id: 1,
@@ -82,6 +85,8 @@ const data = {
       id: '3',
       title: 'I really thank you!',
       author: 'Anonymous',
+      package_type:
+        'Advanced Authentic Tantra & Advanced Spiritual Bodywork & Advanced Energetic Bodywork',
       content: [
         {
           content_id: 1,
@@ -127,6 +132,8 @@ const data = {
       id: '4',
       title: 'I really thank you!',
       author: 'Alba L.',
+      package_type:
+        'De-Armouring & Advanced Authentic Tantra & Advanced Energetic Bodywork',
       content: [
         {
           content_id: 1,

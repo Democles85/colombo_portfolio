@@ -14,8 +14,8 @@ import {
   WrapItem
 } from '@chakra-ui/react'
 import Slider from 'react-slick'
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 import Paragraph from '../components/testimonial_paragraph'
+import PackageParagraph from '../components/package_paragraph'
 import React from 'react'
 import Layout from '../components/layouts/article'
 import data from '../utils/data'
@@ -48,6 +48,7 @@ const Testimonials = () => {
     'rgba(32,32,32, 0.18)',
     'rgba(255,255,255, 0.18)'
   )
+  const blackOrange = useColorModeValue('#202020', '#fcb03b')
 
   const settings = {
     dots: true,
@@ -148,6 +149,16 @@ const Testimonials = () => {
                       {testimonies.author}
                     </Text>
                     <Text fontSize={[14, null, 16]}>{testimonies.country}</Text>
+                    <Text
+                      textAlign={'left'}
+                      fontWeight={'bold'}
+                      color={blackOrange}
+                    >
+                      I experienced:
+                      <PackageParagraph key={testimonies.package_type}>
+                        `{testimonies.package_type}`
+                      </PackageParagraph>
+                    </Text>
                   </GridItem>
                 </WrapItem>
                 {/* Content */}

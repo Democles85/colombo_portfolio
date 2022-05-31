@@ -79,7 +79,11 @@ const Home = () => {
             <Paragraph>
               Resonate with yourself is based on a{' '}
               <span style={{ color: colorValue, fontWeight: 'bold' }}>
-                holistic, physical, emotional, mental, and spiritual level
+                Holistic Therapy
+              </span>{' '}
+              including{' '}
+              <span style={{ color: colorValue, fontWeight: 'bold' }}>
+                physical, emotional, mental, and spiritual level
               </span>
               , where everything is connected as a single body. The modalities
               that are used to resonate with yourself are:
@@ -181,7 +185,9 @@ const Home = () => {
                   Sound Healing
                 </ListItem>
               </List>
-              To support all those brave hearts working on their own beat.
+              <span style={{ color: colorValue, fontWeight: 'bold' }}>
+                To support all those brave hearts working on their own beat.
+              </span>
             </Paragraph>
           </Box>
         </Container>
