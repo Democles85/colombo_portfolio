@@ -24,6 +24,7 @@ import { cx } from '@chakra-ui/utils'
 import React, { useState } from 'react'
 import Layout from '../components/layouts/article'
 import { MdMail } from 'react-icons/md'
+import { AiOutlineWhatsApp } from 'react-icons/ai'
 import Section from '../components/section'
 import * as gtag from '../lib/gtag'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -507,6 +508,26 @@ const Contact = () => {
         </Box>
       </Section>
       <Section delay={0.6}>
+        <Box>
+          <Heading as="h3" variant="section-title">
+            Contact Me Via WhatsApp:
+          </Heading>
+          <List>
+            <ListItem>
+              <Link href="https://wa.me/34671145400" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="orange"
+                  leftIcon={<Icon as={AiOutlineWhatsApp} />}
+                >
+                  +34 671 145 400
+                </Button>
+              </Link>
+            </ListItem>
+          </List>
+        </Box>
+      </Section>
+      <Section delay={0.8}>
         <Box>
           <Heading as="h3" variant="section-title" pb={4}>
             Location:
