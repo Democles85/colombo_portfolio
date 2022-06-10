@@ -3,6 +3,10 @@ import {
   Container,
   Heading,
   Image,
+  List,
+  ListIcon,
+  ListItem,
+  OrderedList,
   Text,
   useColorModeValue
 } from '@chakra-ui/react'
@@ -59,16 +63,26 @@ const AuthenticTantra = () => {
           <Box py={5}>
             <Title>Authentic Tantra</Title>
             <Heading as="h3" my={4} variant="highlight">
-              What is authentic tantra?
+              What is tantra, in simpler terms?
             </Heading>
             <Paragraph>
-              Tantra is a vast metaphysical system, unrelated to any religion,
-              which originated in India and Tibet many centuries ago. This very
-              scientific, comprehensive system gives the human being a gateway
-              into the structure of reality and a practical understanding of the
-              basic laws of the universe, in essence providing us the bases for
-              development as human beings. First and foremost, Tantra is a path
-              to spiritual evolution.
+              Tantra massages is one if the mos refined and sensitive forms of
+              art. It requires a high consciousness, as it requires the presence
+              of soft and intensive energy, flowing within you, taking you deep
+              within experiences and subconsciousness, in order to understand
+              what your being is saying. Tantra is a vivid experience of our own
+              energy, to help us evolve spiritually.
+            </Paragraph>
+            <Heading as="h3" my={4} variant="highlight">
+              What is tantra today, and how many tantra models are there?
+            </Heading>
+            <Paragraph>
+              You will find many tantric models, created from various
+              therapists, heavily involved in the tantric arts. After all of
+              their work with themselves and many lessons, they keep all of
+              their wisdom in the models they created. Naturally, another part
+              of it integrate other types of body work, creating an authentic
+              model in their own way.
             </Paragraph>
             <Heading as="h3" my={4} variant="highlight">
               On another aspect:
@@ -85,6 +99,93 @@ const AuthenticTantra = () => {
               a very fine, highly differentiated system that makes up the subtle
               currents in the human body and how they can be channeled.”
             </Paragraph>
+            <Heading as="h3" my={4} variant="highlight">
+              Where is tantric bodywork based on for me?
+            </Heading>
+            <Paragraph>
+              After my observations on history and a lot of teachers of tantric
+              energy, as well as self exploration and bodywork on others, i have
+              created an authentic model. It is rooted on tantric energy and
+              life force, making it suitable for all who had a tantric session.
+              This session is properly created for those who have had previous
+              therapy sessions and for those retaking a session from me, so I
+              may keep a proper vividness within your soul.
+            </Paragraph>
+            <Heading as="h3" my={4} variant="highlight">
+              How does it work?
+            </Heading>
+            <Paragraph>
+              It remains quite amazing and helpful on how tantric work attracts
+              all the senses, focusing on subconscious touch. It is an extension
+              of the subconscious, by directly ans intensively connecting all
+              our emotions with the invisible energy structures. In order to
+              help heal tensions and traumas, we express ourselves through a
+              direct and connected energy massage. It is both intimate and it
+              touches our body ans soul, helping us connect on a deeper level
+              with ourselves.
+            </Paragraph>
+            <Heading as="h3" my={4} variant="highlight">
+              The benefits of tantric therapy.
+            </Heading>
+            <OrderedList py={2} pl={5}>
+              <ListItem py={1}>
+                <Paragraph>
+                  Reduction if mental and emotional stress, allowing for a
+                  clearer mind and getting rid of negative thinking patterns.
+                </Paragraph>
+              </ListItem>
+              <ListItem py={1}>
+                <Paragraph>
+                  It allows for greater sensitivity towards the delicate flow of
+                  energy, helping us to rid ourselves of energy blocks.
+                </Paragraph>
+              </ListItem>
+              <ListItem py={1}>
+                <Paragraph>
+                  It unblocks our energetic body, making it more sensitive,
+                  helping you find things more vividly.
+                </Paragraph>
+              </ListItem>
+              <ListItem py={1}>
+                <Paragraph>
+                  It opens the gates to our subconsciousness, immersing you into
+                  who you are.
+                </Paragraph>
+              </ListItem>
+              <ListItem py={1}>
+                <Paragraph>
+                  Broadens your subconsciousness, letting more universal energy
+                  flow through.
+                </Paragraph>
+              </ListItem>
+              <ListItem py={1}>
+                <Paragraph>
+                  Connects you more to the center of your heart.
+                </Paragraph>
+              </ListItem>
+              <ListItem py={1}>
+                <Paragraph>
+                  It serves as a trampoline into the spiritual tantric world,
+                  and it grows the our desire for more insight into the world
+                  deep within us. It creates a deep foundation to support your
+                  body and mind, but it also introduces you to new and
+                  unbelievable things. This is a different experience for
+                  everyone.
+                </Paragraph>
+              </ListItem>
+            </OrderedList>
+            {/* <Heading as="h3" my={4} variant="highlight">
+              What is authentic tantra?
+            </Heading>
+            <Paragraph>
+              Tantra is a vast metaphysical system, unrelated to any religion,
+              which originated in India and Tibet many centuries ago. This very
+              scientific, comprehensive system gives the human being a gateway
+              into the structure of reality and a practical understanding of the
+              basic laws of the universe, in essence providing us the bases for
+              development as human beings. First and foremost, Tantra is a path
+              to spiritual evolution.
+            </Paragraph> */}
           </Box>
         </Container>
       </Section>
