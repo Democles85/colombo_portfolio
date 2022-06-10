@@ -90,38 +90,51 @@ const data = {
       content: [
         {
           content_id: 1,
-          text: 'Colombo started with a kind and deep conversation with me, immersing himself in understanding my inner energy and atmosphere, in order to personalize the type of therapy for my energetic needs.'
+          text: (
+            <b>
+              I trust we all are energy, and for that reason I really wanted to
+              try Tantric Energy Healing.
+            </b>
+          )
         },
         {
           content_id: 2,
-          text: 'He passionately and academically explained to me the necessary information about the Chakra System, the Aura, Electromagnetic Fields, the Physical and Non-Physical body, how our bodies store the past traumas. He explained where exactly our blockages occur and the ways available to release energy blocks from our the body.'
+          text: 'Here is my experience with Colombo:'
         },
         {
           content_id: 3,
-          text: 'Furthermore he explained to me how energy works and how to avoid the mind traps, as the mind can not compromise certain energies. All this information was a necessary preparation in order to allow the Energy Activation to a higher level. Colombo raised my awareness to approach the therapy with an open mind and a receptive heart!'
+          text: 'Colombo started with a kind and deep conversation with me, immersing himself in understanding my inner energy and atmosphere, in order to personalize the type of therapy for my energetic needs.'
         },
         {
           content_id: 4,
-          text: 'During the therapy I felt safe. I could be free and myself. The therapy started with activation of my energy to expand it. I felt that I traveled to my limits and meet my blockages. By pressing gently my body, I felt as if Colombo was helping me to open every door inside my body. I felt the activation of the whole system, my whole body was vibrating and all the energy was moving inside me.'
+          text: 'He passionately and academically explained to me the necessary information about the Chakra System, the Aura, Electromagnetic Fields, the Physical and Non-Physical body, how our bodies store the past traumas. He explained where exactly our blockages occur and the ways available to release energy blocks from our the body.'
+        },
+        {
+          content_id: 4,
+          text: 'Furthermore he explained to me how energy works and how to avoid the mind traps, as the mind can not compromise certain energies. All this information was a necessary preparation in order to allow the Energy Activation to a higher level. Colombo raised my awareness to approach the therapy with an open mind and a receptive heart!'
         },
         {
           content_id: 5,
-          text: 'A beautiful combination with sound therapy which brought my detachment as if I was traveling through dimensions.'
+          text: 'During the therapy I felt safe. I could be free and myself. The therapy started with activation of my energy to expand it. I felt that I traveled to my limits and meet my blockages. By pressing gently my body, I felt as if Colombo was helping me to open every door inside my body. I felt the activation of the whole system, my whole body was vibrating and all the energy was moving inside me.'
         },
         {
           content_id: 6,
-          text: 'The Therapy was a great gift, which brought the body and soul to a higher degree in harmony with the Self. Some moments I went into a trance state, where my mind left my body. Some moments I loved my body. Some moments I felt like I was getting to know myself better. Some moments I felt that all the energy I needed for healing was inside me, locked up and waiting to be released. I had the solution and Colombo gave the professional assistance to unlock my energy and resolve the blockages.'
+          text: 'A beautiful combination with sound therapy which brought my detachment as if I was traveling through dimensions.'
         },
         {
           content_id: 7,
-          text: 'That night after therapy I had a deep sleep and the following days my mind felt so calm and balanced. I felt strengthened. I felt balanced. I felt more alive!'
+          text: 'The Therapy was a great gift, which brought the body and soul to a higher degree in harmony with the Self. Some moments I went into a trance state, where my mind left my body. Some moments I loved my body. Some moments I felt like I was getting to know myself better. Some moments I felt that all the energy I needed for healing was inside me, locked up and waiting to be released. I had the solution and Colombo gave the professional assistance to unlock my energy and resolve the blockages.'
         },
         {
           content_id: 8,
-          text: 'There are indeed so many things to explain my experience, yet to conclude Colombo offered me a broader perspective regarding body, mind, emotions, soul and interaction with the Universe!'
+          text: 'That night after therapy I had a deep sleep and the following days my mind felt so calm and balanced. I felt strengthened. I felt balanced. I felt more alive!'
         },
         {
           content_id: 9,
+          text: 'There are indeed so many things to explain my experience, yet to conclude Colombo offered me a broader perspective regarding body, mind, emotions, soul and interaction with the Universe!'
+        },
+        {
+          content_id: 10,
           text: 'Colombo is a passionate therapist with a pleasant personality. A man who loves Energy so much and his goal is to support in the best ways our energetic expansion! "We are basically what we are." Thank you with all my heart for this great gift!'
         }
       ],
