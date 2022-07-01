@@ -22,7 +22,7 @@ const Home = () => {
 
   return (
     <Layout>
-      <Section>
+      {/* <Section>
         <Box
           textStyle="h1"
           borderRadius="lg"
@@ -53,7 +53,7 @@ const Home = () => {
             </Text>
           </Text>
         </Box>
-      </Section>
+      </Section> */}
 
       <Section delay={0.5}>
         <Box>
