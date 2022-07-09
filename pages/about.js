@@ -4,15 +4,20 @@ import {
   Divider,
   Heading,
   Image,
+  List,
+  ListIcon,
+  ListItem,
   Text,
   useColorModeValue
 } from '@chakra-ui/react'
+import { BsFillCircleFill } from 'react-icons/bs'
 import React from 'react'
 import Layout from '../components/layouts/article'
 import Paragraph from '../components/paragraph'
 import Section from '../components/section'
 
 const About = () => {
+  const colorValue = useColorModeValue('#202020', '#fcb03b')
   const aboutMeImage = '/images/works/thumb_4.jpeg'
   return (
     <Layout title="About Me">
@@ -65,17 +70,17 @@ const About = () => {
                 variant="section-title"
                 color={useColorModeValue('#202023', '#fcb03b')}
               >
-                My passion is
+                I&apos;m a Therapist
               </Heading>
               <Paragraph>
-                The deep understanding of the human species, by softly entering
-                inside, through deep emotional release, an empathic approach
-                outside of traumas. In my job, I focus on creating a safe place
-                for transforming obscurity into light.
+                Who has an experience and passion in working in the field of
+                Alternative Healing to support people through the different
+                levels of modalities, such as: <b>Physical</b>, <b>Mental</b>,{' '}
+                <b> Emotional</b> and <b>Spiritual</b>.
               </Paragraph>
             </Box>
 
-            <Box py={5}>
+            {/* <Box py={5}>
               <Heading
                 as="h3"
                 variant="section-title"
@@ -116,8 +121,8 @@ const About = () => {
               >
                 Inside me I hold
               </Text>{' '}
-              The ability to see through the traumas, and into your higher self
-            </Box>
+              The ability to see through the traumas, and into your higher self!
+            </Box> */}
           </Section>
         </Container>
       </Section>
