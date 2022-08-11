@@ -365,15 +365,6 @@ const Contact = () => {
                   >
                     Male
                   </option>
-                  <option
-                    style={{
-                      color: colorValue09,
-                      background: useColorModeValue('#f0e7db', '#202023')
-                    }}
-                    value="Other"
-                  >
-                    Other
-                  </option>
                 </Select>
                 {errors?.gender && (
                   <FormHelperText color={errorColor}>
