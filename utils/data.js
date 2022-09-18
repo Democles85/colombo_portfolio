@@ -167,6 +167,94 @@ const data = {
       ],
       image: '/images/testimonials/alba_l.jpeg',
       country: 'Italy'
+    },
+    {
+      id: '5',
+      title: 'I really thank you!',
+      author: 'Farah',
+      package_type: 'Authentic Bodywork & Sound Healing',
+      content: [
+        {
+          content_id: 1,
+          text: "I've had many sessions, but this one is an experience that changes your understanding of your body. You learn your needs and limits. Truly loved the session, really learnt a lot of things about myself. Thank you!"
+        }
+      ],
+      image: '/images/testimonials/default_avatar.png',
+      country: 'United Kingdom'
+    },
+    {
+      id: '6',
+      title: 'I really thank you!',
+      author: 'Gulia',
+      package_type: 'Advance Bodywork & Reiki & Sound Healing',
+      content: [
+        {
+          content_id: 1,
+          text: 'I was expecting a superficial session and instead it was a wonderful journey through me, using pure energy.'
+        }
+      ],
+      image: '/images/testimonials/default_avatar.png',
+      country: 'Italy'
+    },
+    {
+      id: '7',
+      title: 'I really thank you!',
+      author: 'Stefan',
+      package_type: 'Spiritual Bodywork & Reiki & Sounds Healing ',
+      content: [
+        {
+          content_id: 1,
+          text: 'Totally another type of session, made me feel more conscious at many deep levels.'
+        }
+      ],
+      image: '/images/testimonials/default_avatar.png',
+      country: 'Skopje'
+    },
+    {
+      id: '8',
+      title: 'I really thank you!',
+      author: 'Kyra',
+      package_type: 'Authentic Advanced Bodywork & Sound Healing',
+      content: [
+        {
+          content_id: 1,
+          text: 'An extraordinary, very special, kind and loving session.'
+        }
+      ],
+      image: '/images/testimonials/default_avatar.png',
+      country: 'Netherlands'
+    },
+    {
+      id: '9',
+      title: 'I really thank you!',
+      author: 'Mark',
+      package_type: 'Bodywork & Reiki',
+      content: [
+        {
+          content_id: 1,
+          text: 'Very comfortable session, I really loved it. Very beautiful.'
+        }
+      ],
+      image: '/images/testimonials/default_avatar.png',
+      country: 'Netherlands'
+    },
+    {
+      id: '10',
+      title: 'I really thank you!',
+      author: 'Matty P.',
+      package_type: 'Spiritual Advance Bodywork & Reiki & Sound Healing',
+      content: [
+        {
+          content_id: 1,
+          text: 'A completely transcending experience. I had never heard of a spiritual Bodywork before. I have had various alternative treatments and such a reiki, reflexology and kinesiology, however, this was a much more powerful treatment which exceeded my expectations.'
+        },
+        {
+          content_id: 2,
+          text: 'With great care, connection and pure intention, this service was delivered exceptionally. A must try for anyone looking to develop self discovery and healing.'
+        }
+      ],
+      image: '/images/testimonials/default_avatar.png',
+      country: 'United Kingdom'
     }
   ]
 }
