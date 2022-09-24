@@ -171,6 +171,38 @@ const data = {
     {
       id: '5',
       title: 'I really thank you!',
+      author: 'Matty P.',
+      package_type: 'Spiritual Advance Bodywork & Reiki & Sound Healing',
+      content: [
+        {
+          content_id: 1,
+          text: 'A completely transcending experience. I had never heard of a spiritual Bodywork before. I have had various alternative treatments and such a reiki, reflexology and kinesiology, however, this was a much more powerful treatment which exceeded my expectations.'
+        },
+        {
+          content_id: 2,
+          text: 'With great care, connection and pure intention, this service was delivered exceptionally. A must try for anyone looking to develop self discovery and healing.'
+        }
+      ],
+      image: '/images/testimonials/matty_p.jpeg',
+      country: 'United Kingdom'
+    },
+    {
+      id: '6',
+      title: 'I really thank you!',
+      author: 'Irina K.',
+      package_type: 'Advanced Energetic Bodywork & Advanced Spiritual Bodywork',
+      content: [
+        {
+          content_id: 1,
+          text: "Today i experienced authentic healing Bodywork . Its was the first time and i couldn't describe the feeling after the session. It's like a transcendental connection between reality and other world. It helps you to release all bad energy and to let positive vibes enter your body. As a result you renovate your power, feelings, emotions and relax. Aromatherapy and sounds also give it's special effect. I will definitely learn more about my body and chakras.This experience is really worth trying."
+        }
+      ],
+      image: '/images/testimonials/default_avatar.png',
+      country: 'Ukraine'
+    },
+    {
+      id: '7',
+      title: 'I really thank you!',
       author: 'Farah',
       package_type: 'Authentic Bodywork & Sound Healing',
       content: [
@@ -183,7 +215,7 @@ const data = {
       country: 'United Kingdom'
     },
     {
-      id: '6',
+      id: '8',
       title: 'I really thank you!',
       author: 'Gulia',
       package_type: 'Advance Bodywork & Reiki & Sound Healing',
@@ -197,7 +229,7 @@ const data = {
       country: 'Italy'
     },
     {
-      id: '7',
+      id: '9',
       title: 'I really thank you!',
       author: 'Stefan',
       package_type: 'Spiritual Bodywork & Reiki & Sounds Healing ',
@@ -211,7 +243,7 @@ const data = {
       country: 'Skopje'
     },
     {
-      id: '8',
+      id: '10',
       title: 'I really thank you!',
       author: 'Kyra',
       package_type: 'Authentic Advanced Bodywork & Sound Healing',
@@ -225,7 +257,7 @@ const data = {
       country: 'Netherlands'
     },
     {
-      id: '9',
+      id: '11',
       title: 'I really thank you!',
       author: 'Mark',
       package_type: 'Bodywork & Reiki',
@@ -237,24 +269,6 @@ const data = {
       ],
       image: '/images/testimonials/default_avatar.png',
       country: 'Netherlands'
-    },
-    {
-      id: '10',
-      title: 'I really thank you!',
-      author: 'Matty P.',
-      package_type: 'Spiritual Advance Bodywork & Reiki & Sound Healing',
-      content: [
-        {
-          content_id: 1,
-          text: 'A completely transcending experience. I had never heard of a spiritual Bodywork before. I have had various alternative treatments and such a reiki, reflexology and kinesiology, however, this was a much more powerful treatment which exceeded my expectations.'
-        },
-        {
-          content_id: 2,
-          text: 'With great care, connection and pure intention, this service was delivered exceptionally. A must try for anyone looking to develop self discovery and healing.'
-        }
-      ],
-      image: '/images/testimonials/default_avatar.png',
-      country: 'United Kingdom'
     }
   ]
 }
