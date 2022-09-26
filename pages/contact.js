@@ -14,20 +14,21 @@ import {
   Link,
   List,
   ListItem,
-  Select,
   Textarea,
   useColorModeValue,
   chakra,
   useStyles
 } from '@chakra-ui/react'
 import { cx } from '@chakra-ui/utils'
-import React, { useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import Layout from '../components/layouts/article'
 import { MdMail } from 'react-icons/md'
 import { AiOutlineWhatsApp } from 'react-icons/ai'
 import Section from '../components/section'
 import * as gtag from '../lib/gtag'
 import { AnimatePresence, motion } from 'framer-motion'
+import countryList from 'react-select-country-list'
+import { Select } from 'chakra-react-select'
 
 export function ColRequiredIndicator() {
   const styles = useStyles()
@@ -63,6 +64,13 @@ const Contact = () => {
     'rgba(255, 255, 255, 0.40)'
   )
 
+  const countries = useMemo(() => countryList().getData(), [])
+
+  const genders = [
+    { value: 'female', label: 'Female' },
+    { value: 'male', label: 'Male' }
+  ]
+
   const ContactThumbnail = '/images/works/contact_thumbnail.jpg'
   const formBoxPaddingY = 2.5
   const formBoxPaddingX = 25
@@ -71,9 +79,13 @@ const Contact = () => {
 
   const [firstName, setFirstName] = useState('')
   const [email, setEmail] = useState('')
+  const [country, setCountry] = useState('')
   const [subject, setSubject] = useState('')
   const [message, setMessage] = useState('')
   const [gender, setGender] = useState('')
+
+  console.log(country)
+  console.log(gender)
 
   const [errors, setErrors] = useState({})
 
@@ -82,6 +94,14 @@ const Contact = () => {
   const [showSuccessMessage, setShowSuccessMessage] = useState(false)
   const [showFillAllMessage, setShowFillAllMessage] = useState(false)
   const [showFailureMessage, setShowFailureMessage] = useState(false)
+
+  const countryHandler = value => {
+    setCountry(value)
+  }
+
+  const genderHandler = value => {
+    setGender(value)
+  }
 
   const handleValidation = () => {
     let tempErrors = {}
@@ -111,6 +131,12 @@ const Contact = () => {
       tempErrors['email'] = true
       isValid = false
     }
+
+    if (country.length <= 0) {
+      tempErrors['country'] = true
+      isValid = false
+    }
+
     setErrors({ ...tempErrors })
     // console.log('errors', errors)
     // console.log('valid', isValid)
@@ -129,6 +155,7 @@ const Contact = () => {
         body: JSON.stringify({
           email: email,
           firstName: firstName,
+          country: country,
           subject: subject,
           message: message,
           gender: gender
@@ -153,6 +180,7 @@ const Contact = () => {
         setButtonText('Send')
 
         setFirstName('')
+        setCountry('')
         setEmail('')
         setMessage('')
         setSubject('')
@@ -178,6 +206,7 @@ const Contact = () => {
 
       setFirstName('')
       setEmail('')
+      setCountry('')
       setMessage('')
       setSubject('')
       setGender('')
@@ -321,6 +350,72 @@ const Contact = () => {
                   </FormHelperText>
                 )}
               </Box>
+
+              <Box
+                width={formBoxWidth}
+                py={formBoxPaddingY}
+                px={formBoxPaddingX}
+              >
+                <FormLabel htmlFor="country">
+                  Country <ColRequiredIndicator />
+                </FormLabel>
+                <Select
+                  options={countries}
+                  isInvalid={errors['country']}
+                  focusBorderColor={useColorModeValue('#fcb03b', '#fcb03b')}
+                  id={'country'}
+                  placeholder={'Country'}
+                  selectedOptionColor={'orange'}
+                  value={country}
+                  onChange={countryHandler}
+                  chakraStyles={{
+                    dropdownIndicator: (
+                      prev,
+                      { selectProps: { menuIsOpen } }
+                    ) => ({
+                      ...prev,
+                      '> svg': {
+                        transitionDuration: 'normal',
+                        transform: `rotate(${menuIsOpen ? 180 : 0}deg)`
+                      }
+                    }),
+                    option: (prev, { isFocused }) => ({
+                      ...prev,
+                      backgroundColor: isFocused ? 'orange' : '#202023',
+                      color: isFocused ? '#ffffff' : undefined
+                    }),
+                    menu: prev => ({
+                      ...prev,
+                      background: '#202023',
+                      color: '#fcb03b',
+                      border: '1px solid #fcb03b',
+                      borderRadius: 'lg',
+                      boxShadow: 'none',
+                      outline: 'none'
+                    }),
+                    menuList: prev => ({
+                      ...prev,
+                      padding: 0
+                    }),
+                    control: (prev, { isFocused }) => ({
+                      ...prev,
+                      borderColor: isFocused ? 'orange' : `${colorValue06}`,
+                      boxShadow: isFocused
+                        ? '0 0 0 1px #fcb03b'
+                        : '0 0 0 1px #202023',
+                      '&:hover': {
+                        borderColor: isFocused ? 'orange' : `${colorValue09}`
+                      }
+                    })
+                  }}
+                />
+                {errors?.country && (
+                  <FormHelperText color={errorColor}>
+                    Please select a country.
+                  </FormHelperText>
+                )}
+              </Box>
+
               <Box
                 width={formBoxWidth}
                 py={formBoxPaddingY}
@@ -329,7 +424,7 @@ const Contact = () => {
                 <FormLabel htmlFor="gender">
                   Gender <ColRequiredIndicator />
                 </FormLabel>
-                <Select
+                {/* <Select
                   isInvalid={errors['gender']}
                   borderColor={colorValue06}
                   _hover={{
@@ -365,7 +460,57 @@ const Contact = () => {
                   >
                     Male
                   </option>
-                </Select>
+                </Select> */}
+                <Select
+                  options={genders}
+                  isInvalid={errors['gender']}
+                  focusBorderColor={useColorModeValue('#fcb03b', '#fcb03b')}
+                  id={'gender'}
+                  placeholder={'Your Gender'}
+                  selectedOptionColor={'orange'}
+                  value={gender}
+                  onChange={genderHandler}
+                  chakraStyles={{
+                    dropdownIndicator: (
+                      prev,
+                      { selectProps: { menuIsOpen } }
+                    ) => ({
+                      ...prev,
+                      '> svg': {
+                        transitionDuration: 'normal',
+                        transform: `rotate(${menuIsOpen ? 180 : 0}deg)`
+                      }
+                    }),
+                    option: (prev, { isFocused }) => ({
+                      ...prev,
+                      backgroundColor: isFocused ? 'orange' : '#202023',
+                      color: isFocused ? '#ffffff' : undefined
+                    }),
+                    menu: prev => ({
+                      ...prev,
+                      background: '#202023',
+                      color: '#fcb03b',
+                      border: '1px solid #fcb03b',
+                      borderRadius: 'lg',
+                      boxShadow: 'none',
+                      outline: 'none'
+                    }),
+                    menuList: prev => ({
+                      ...prev,
+                      padding: 0
+                    }),
+                    control: (prev, { isFocused }) => ({
+                      ...prev,
+                      borderColor: isFocused ? 'orange' : `${colorValue06}`,
+                      boxShadow: isFocused
+                        ? '0 0 0 1px #fcb03b'
+                        : '0 0 0 1px #202023',
+                      '&:hover': {
+                        borderColor: isFocused ? 'orange' : `${colorValue09}`
+                      }
+                    })
+                  }}
+                />
                 {errors?.gender && (
                   <FormHelperText color={errorColor}>
                     Please select your gender.

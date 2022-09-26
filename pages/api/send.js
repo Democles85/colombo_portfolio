@@ -4,17 +4,20 @@ require('dotenv').config
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 async function sendEmail(req, res) {
+  const { subject, firstName, email, gender, message, country } = req.body
+
   try {
     await sgMail.send({
       to: 'resonatewithyourself@gmail.com',
       from: 'resonatewithyourselfemailer@gmail.com',
-      subject: `[Lead from website] : ${req.body.subject}`,
+      subject: `[Lead from website] : ${subject}`,
       html: `  
-        <h3>You've got a new mail from ${req.body.firstName}, their email is: ${req.body.email} </h3>
-        <h3>Gender: ${req.body.gender}</h3>
+        <h3>You've got a new mail from ${firstName}, their email is: ${email} </h3>
+        <h3>They are from: ${country.label}</h3>
+        <h3>Gender: ${gender.label}</h3>
         <div style="font-size: 16px;">
         <strong>Message:</strong>
-        <p>${req.body.message}</p>
+        <p>${message}</p>
         </div>`
     })
   } catch (error) {
