@@ -53,7 +53,7 @@ const Testimonials = () => {
   const settings = {
     dots: true,
     accessibility: true,
-    autoplay: true,
+    autoplay: false,
     fade: false,
     pauseOnSelect: true,
     pauseOnFocus: true,
