@@ -189,6 +189,20 @@ const data = {
     {
       id: '6',
       title: 'I really thank you!',
+      author: 'Stavrula A.',
+      package_type: 'Spiritual Bodywork',
+      content: [
+        {
+          content_id: 1,
+          text: 'A session, spiritual, Colombo is an intuitive person who understands very quickly what is useful for you.  A good listener.  He truly has divine hands helping you release your blockages.  Sound healing was another beautiful ending to the session, lifting your spirits.  Thank you very much for what you are giving away.'
+        }
+      ],
+      image: '/images/testimonials/default_avatar.png',
+      country: 'Greece'
+    },
+    {
+      id: '6',
+      title: 'I really thank you!',
       author: 'Irina K.',
       package_type: 'Advanced Energetic Bodywork & Advanced Spiritual Bodywork',
       content: [
